@@ -1,0 +1,108 @@
+﻿<dotnetnuke type="Package" version="5.0"> 
+  <packages>
+    <package name="DNNGo.LayerGallery" type="Module" version="03.02.02">
+      <friendlyName>DNNGo LayerGallery</friendlyName>
+      <description>
+        <![CDATA[
+        LayerGallery is an Animated Effect Collection module.This module collects multiple image effects like special effect scripts, slider, rotation, cyclical, circulation etc. Multiple theme styles in every Animated Effect can adapt to different skin styles. You can set parameters for each effect separately, which allows you to control the animation speed, interval time, slider mode conveniently. We always integrate fresh animated effects as a regularly weekly update, you can enjoy this value-added service free of charge.
+        &lt;br /&gt;
+        Support Email: &lt;a  href="mailto:dnnskindev@gmail.com" title="Email"&gt;dnnskindev@gmail.com&lt;/a&gt; Our Site: &lt;a  target="_blank" href="http://www.DNNGo.net" title="Email"&gt;www.DNNGo.net&lt;/a&gt;
+        ]]>
+      </description>
+      <iconFile>DesktopModules/DNNGo_LayerGallery/Resource/images/logo-modules.png</iconFile>
+      <owner>
+        <name>DNNGo.net</name>
+        <organization>DNNGo.net Corporation</organization>
+        <url>
+          <![CDATA[http://www.dnngo.net]]>
+        </url>
+        <email>
+          <![CDATA[dnnskindev@gmail.com]]>
+        </email>
+      </owner>
+		<license  src="license.txt" />
+		<releaseNotes src="ReleaseNotes.txt"/>
+		<azureCompatible>true</azureCompatible>
+		<dependencies>
+			<dependency type="CoreVersion">08.00.00</dependency>
+		</dependencies>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>DNNGo.LayerGallery</moduleName>
+            <foldername>DNNGo_LayerGallery</foldername>
+            <businessControllerClass>DNNGo.Modules.LayerGallery.baseController,DNNGo.Modules.LayerGallery</businessControllerClass>
+            <supportedFeatures>
+              <supportedFeature type="Portable" />
+            </supportedFeatures>
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>DNNGo.LayerGallery</friendlyName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/DNNGo_LayerGallery/View_Index.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+          <eventMessage>
+            <processorType>DotNetNuke.Entities.Modules.EventMessageProcessor, DotNetNuke</processorType>
+            <processorCommand>UpgradeModule</processorCommand>
+            <attributes>
+              <businessControllerClass>DNNGo.Modules.LayerGallery.baseController,DNNGo.Modules.LayerGallery</businessControllerClass>
+              <desktopModuleID>[DESKTOPMODULEID]</desktopModuleID>
+              <upgradeVersionsList>01.00.00</upgradeVersionsList>
+            </attributes>
+          </eventMessage>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules\DNNGo_LayerGallery\</basePath>
+            <resourceFile>
+              <name>ResourceFile.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <assembly>
+				      <path>bin</path>
+              <name>DNNGo.Modules.LayerGallery.dll</name>
+				      <version>03.02.02</version>
+            </assembly>
+			      <assembly>
+				      <path>bin</path>
+				      <name>CNVelocity.dll</name>
+				      <version>01.01.00</version>
+			  </assembly>
+          </assemblies>
+        </component>
+        <component type="Script">
+          <scripts>
+            <basePath>DesktopModules\DNNGo_LayerGallery</basePath>
+            <script type="Install">
+				<path>Providers\DataProviders\SqlDataProvider</path>
+              <name>01.00.00.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+            <script type="UnInstall">
+				<path>Providers\DataProviders\SqlDataProvider</path>
+              <name>Uninstall.SqlDataProvider</name>
+              <version>01.00.00</version>
+            </script>
+          </scripts>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>

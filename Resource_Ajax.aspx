@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Resource_Ajax.aspx.cs" Inherits="DNNGo.Modules.LayerGallery.Resource_Ajax1" %>

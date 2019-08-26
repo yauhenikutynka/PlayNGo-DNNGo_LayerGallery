@@ -1,0 +1,422 @@
+﻿<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="${Module.ModulePath}Effects/${EffectName}/css/settings-ie8.css">
+<![endif]-->
+ 
+
+<div class="tp-banner-container" id="LayerGallery${ModuleID}">
+	<div class="tp-banner"  >
+		<ul style="display:none;">
+            #if($DataList.Count > 0) 
+                #foreach($DataItem in $DataList)	
+                    <!-- SliderOptions Dictionary  -->
+                    #set($SOS = $xf.ViewDicts($DataItem))
+                    <!-- SLIDE.${DataItem.ID}-->
+                    <li 
+                    class="tp-slides-item"
+                    #if(${xf.GetValue($SOS,"randomtransition","off")} =="on")
+                        data-randomtransition="${xf.GetValue($SOS,"randomtransition","off")}" 
+                    #else
+                         data-transition="${xf.RandomTo( ${xf.GetValue($SOS,"transition","fade")})}" 
+                    #end
+                    ${xf.FormatValue($SOS,"delay",5000,"data-delay=\"{0}\"")} 
+                    ${xf.FormatValue($SOS,"slotamount","0","data-slotamount=\"{0}\"")}  
+                    ${xf.FormatValue($SOS,"masterspeed",1500,"data-masterspeed=\"{0}\"")} 
+                    ${xf.FormatValue($SOS,"saveperformance","off","data-saveperformance=\"{0}\"")} 
+                    ${xf.FormatValue($SOS,"title","","data-title=\"{0}\"")} 
+                    ${xf.FormatValue($SOS,"thumb","","data-thumb=\"{0}\"")} 
+
+                    data-displaydesktop="${xf.GetValue($SOS,"display_desktop","on")}"
+                    data-displaytablet="${xf.GetValue($SOS,"display_tablet","on")}"
+                    data-displayphone="${xf.GetValue($SOS,"display_phone","on")}"
+
+
+                    #if(${xf.GetValue($SOS,"link","")} != "" &&  ${xf.GetValue($SOS,"link","")} != "http://")
+                        data-link="${xf.GetValue($SOS,"link","")}" 
+                        data-target="${xf.GetValue($SOS,"target","_blank")}" 
+                        data-slideindex="${xf.GetValue($SOS,"slideindex","")}" 
+                    #end
+                    >
+
+                    #if(${xf.GetValue($SOS,"type","image")} == "media")
+                         <!-- Background video image -->
+                         #if(${xf.GetValue($SOS,"videoposter","")} !="") 
+                            <img src="${xf.Link(${xf.GetValue($SOS,"videoposter","")})}" alt="${xf.GetValue($SOS,"imgalt","")}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                         #end
+                         <!-- Background video -->
+                         <div class="tp-caption fullscreenvideo tp-videolayer ${xf.GetValue($SOS,"incoming","")} ${xf.GetValue($SOS,"outgoing","")}" 
+                         #if(${xf.GetValue($SOS,"videotype","HTML5 Video")} == "Vimeo Video")
+                            data-vimeoid="${xf.GetValue($SOS,"vimeoid","")}" 
+                            data-videoattributes="${xf.FormatValue($SOS,"videoattributes","","{0}")}#if( ${xf.FormatValue($SOS,"autoplay","true","*{0}")}== "*true")&autoplay=1#end#if( ${xf.FormatValue($SOS,"autoplayonlyfirsttime","true","*{0}")}!= "*true")&loop=1#end#if(${xf.FormatValue($SOS,"videocontrols","","a{0}")} !="acontrols")&title=0&byline=0&portrait=0#end" 
+                         #elseif(${xf.GetValue($SOS,"videotype","HTML5 Video")} == "YouTube Video")
+                            data-ytid="${xf.GetValue($SOS,"ytid","")}" 
+                            data-videoattributes="${xf.FormatValue($SOS,"videoattributes","","{0}")}#if( ${xf.FormatValue($SOS,"autoplay","true","*{0}")}== "*true")&autoplay=1#end#if( ${xf.FormatValue($SOS,"autoplayonlyfirsttime","true","*{0}")}!= "*true")&loop=1&playlist=${xf.GetValue($SOS,"ytid","")}#end#if(${xf.FormatValue($SOS,"videocontrols","","a{0}")} !="acontrols")&controls=0&showinfo=0&rel=0#end" 
+                         #else
+                             data-videomp4="${xf.Link(${xf.GetValue($SOS,"videomp4","")})}" 
+                             data-videoogv="${xf.Link(${xf.GetValue($SOS,"videoogv","")})}" 
+                             data-videowebm="${xf.Link(${xf.GetValue($SOS,"videowebm","")})}"
+                             data-videoattributes="${xf.FormatValue($SOS,"videoattributes","","{0}")}" 
+                         #end
+
+                         ${xf.FormatValue($SOS,"speed",600,"data-speed=\"{0}\"")}
+                         ${xf.FormatValue($SOS,"start",1000,"data-start=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"easing","Linear.easeNone","data-easing=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"endspeed",500,"data-endspeed=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"endeasing","Linear.easeNone","data-endeasing=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"autoplay","true","data-autoplay=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"autoplayonlyfirsttime","true","data-autoplayonlyfirsttime=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"nextslideatend","true","data-nextslideatend=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"videowidth","100%","data-videowidth=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"videoheight","100%","data-videoheight=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"videpreload","none","data-videpreload=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"videocontrols","","data-videocontrols=\"{0}\"")} 
+                          
+                        
+                         
+                         ${xf.FormatValue($SOS,"videoloop","none","data-videoloop=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"forcecover",0,"data-forcecover=\"{0}\"")}  
+                         ${xf.FormatValue($SOS,"forcerewind","off","data-forcerewind=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"aspectratio","16:9","data-aspectratio=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"volume","none","data-volume=\"{0}\"")} 
+                         ${xf.FormatValue($SOS,"videoposter","","data-videoposter=\"{0}\"")} > </div>
+                    #else
+                           <!-- Background picture -->
+                            #if((${xf.GetValue($SOS,"bgimg","")} != "" &&  ${xf.GetValue($SOS,"bgimg","")} != "http://") ||  ${xf.GetValue($SOS,"bgcolor","")} != "")
+                                <img 
+                                #if(${xf.GetValue($SOS,"bgcolor","")} != "" )
+                                    src="${Module.ModulePath}Resource/images/transparent.png" 
+                                    style="background-color:${xf.GetValue($SOS,"bgcolor","")};"
+                                #elseif(${xf.GetValue($SOS,"bgimg","")} != "" &&  ${xf.GetValue($SOS,"bgimg","")} != "http://")
+                                    #if(${xf.GetValue($SOS,"lazyload","off")} == "on")
+                                        data-lazyload="${xf.Link(${xf.GetValue($SOS,"bgimg","")})}"
+                                        src="${Module.ModulePath}Effects/${EffectName}/images/dummy.png"  
+                                    #else
+                                        src="${xf.Link(${xf.GetValue($SOS,"bgimg","")})}" 
+                                    #end
+                                #end
+                                data-bgrepeat="${xf.GetValue($SOS,"bgrepeat","no-repeat")}" 
+                                data-bgposition="${xf.GetValue($SOS,"bgposition","left bottom")}" 
+                                data-bgpositionend="${xf.GetValue($SOS,"bgpositionend","center top")}"
+                                data-duration="${xf.GetValue($SOS,"duration",2000)}" 
+                                data-ease="${xf.GetValue($SOS,"ease","Power4.easeInOut")}" 
+                                data-kenburns="${xf.GetValue($SOS,"kenburns","on")}" 
+                                #if(${xf.GetValue($SOS,"kenburns","on")} =="on")
+                                    data-bgfit="${xf.GetValue($SOS,"bgfitother",200)}" 
+                                #else
+                                    data-bgfit="${xf.GetValue($SOS,"bgfit",200)}" 
+                                #end
+
+                                data-bgfitend="${xf.GetValue($SOS,"bgfitend",100)}" 
+                                alt="${xf.GetValue($SOS,"imgalt","")}">
+                            #else
+                                <img src="${Module.ModulePath}Resource/images/transparent.png"  alt="${xf.GetValue($SOS,"imgalt","")}" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            #end
+                    #end
+                       
+                   
+		 
+
+					    <!-- LAYERS -->
+                         #foreach($LayerItem in $LayerList)	
+                            #if($LayerItem.ContentID == $DataItem.ID)
+                                <!-- LayerOptions Dictionary  -->
+                                #set($LOS = $xf.ViewDicts($LayerItem))
+                                <!-- LAYER NR.${LayerItem.ID} -->
+                                
+                                
+                                #if(${xf.GetValue($LOS,"linkoption","Url","")} != "" &&  ${xf.GetValue($LOS,"linkoption","Url","")} != "http://")
+                                	<a href="${xf.GetValue($LOS,"linkoption","Url","")}" target="${xf.GetValue($LOS,"linkoption","Target","_blank")}" 
+                                #elseif(${xf.GetValue($LOS,0,"contentoption","type","image")} == "text")
+									<${xf.Rt(${xf.GetValue($LOS,2,"contentoption","contentcode","")} ,"")}
+                                #else
+									<div
+                                #end 
+                                
+                                class="tp-caption ${xf.ViewVideolayer($LOS)} 
+                                        ${xf.GetValue($LOS,"attributesoption","class","")} 
+                                        
+                                        ${xf.Rt(${xf.GetValue($LOS,"Othersettings","stylingcaptions","")} ,"none")} 
+                                        ${xf.Rt(${xf.GetValue($LOS,"Othersettings","parallaxsettings","")} ,"none")} 
+                                        ${xf.Rt(${xf.GetValue($LOS,"Othersettings","scrollbelowslider","")} ,"off")} 
+                                        ${xf.Rt(${xf.GetValue($LOS,"Othersettings","withoutcorner","")},"none")}  
+                                        ${xf.GetValue($LOS,0,"transitionoption","Classes","")} 
+                                        ${xf.GetValue($LOS,1,"transitionoption","Classes","")}
+                                        "
+                                style=" ${xf.FormatValue($LOS,"styleoption","top","","top:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","left","","left:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","width","","width:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","height","","height:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","padding_top","","padding-top:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","padding_left","","padding-left:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","padding_right","","padding-right:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","padding_bottom","","padding-bottom:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","border_top","","border-top:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","border_left","","border-left:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","border_right","","border-right:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","border_bottom","","border-bottom:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","font_family","","font-family:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","font_size","","font-size:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","line_height","","line-height:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","color","","color:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","background_color","","background-color:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","word_wrap","","word-wrap:{0};")} 
+                                        ${xf.FormatValue($LOS,"styleoption","border_radius","","border-radius:{0};")} 
+	                                    ${xf.FormatValue($LOS,"styleoption","border_radius","","-moz-border-radius:{0};")} 
+	                                    ${xf.FormatValue($LOS,"styleoption","border_radius","","-webkit-border-radius:{0};")}
+                                        ${xf.GetValue($LOS,"styleoption","CustomCSS","")}  
+                                        "
+                                    ${xf.FormatValue($LOS,"attributesoption","id","","id=\"{0}\"")} 
+                                    ${xf.FormatValue($LOS,"attributesoption","title","","title=\"{0}\"")} 
+                                    ${xf.FormatValue($LOS,"attributesoption","alt","","alt=\"{0}\"")} 
+                                    ${xf.FormatValue($LOS,"attributesoption","rel","","rel=\"{0}\"")} 
+  
+			                        data-x="${xf.GetValue($LOS,"datasettings","x",0)}" 
+			                        data-y="${xf.GetValue($LOS,"datasettings","y",0)}" 
+                                    data-hoffset="${xf.GetValue($LOS,"datasettings","hoffset",0)}" 
+                                    data-voffset= "${xf.GetValue($LOS,"datasettings","voffset",0)}" 
+			                        data-speed="${xf.GetValue($LOS,"datasettings","speed",1000)}" 
+                                    data-splitin="${xf.GetValue($LOS,"datasettings","splitin","")}" 
+                                    data-splitout="${xf.FormatValue($LOS,"datasettings","splitout","","{0}")}" 
+			                        data-start="${xf.GetValue($LOS,"datasettings","start",1100)}" 
+			                        data-easing="${xf.GetValue($LOS,"datasettings","easing","Power4.easeOut")}" 
+			                        data-elementdelay="${xf.GetValue($LOS,"datasettings","elementdelay","0.01")}" 
+			                        data-endelementdelay="${xf.GetValue($LOS,"datasettings","endelementdelay","0.1")}" 
+			                        data-endspeed="${xf.GetValue($LOS,"datasettings","endspeed",1500)}" 
+                                    data-endeasing="${xf.GetValue($LOS,"datasettings","endeasing","Power4.easeIn")}" 
+                                    
+                                    data-displaydesktop="${xf.GetValue($LOS,0,"contentoption","displaydesktop","on")}"
+                                    data-displaytablet="${xf.GetValue($LOS,0,"contentoption","displaytablet","on")}"
+                                    data-displayphone="${xf.GetValue($LOS,0,"contentoption","displayphone","on")}"
+
+                                  
+
+                                    ${xf.FormatValue($LOS,"datasettings","end","","data-end=\"{0}\"")} 
+
+                                    #if(${xf.GetValue($LOS,0,"transitionoption","Classes","")} == "customin")
+                                        data-customin="${xf.GetListToString($LOS,0,"transitionoption")}" 
+                                    #end
+                                    #if(${xf.GetValue($LOS,1,"transitionoption","Classes","")} == "customout")
+                                        data-customout="${xf.GetListToString($LOS,1,"transitionoption")}" 
+                                    #end
+                                    
+
+                                    #if(${xf.GetValue($LOS,0,"contentoption","type","image")} == "video") 
+                                        #if(${xf.GetValue($LOS,0,"contentoption","vtype","YouTube")} == "YouTube") 
+                                             data-ytid= "${xf.GetValue($LOS,3,"contentoption","youtube","")}" 
+                                             data-autoplay= "${xf.GetValue($LOS,3,"contentoption","autoplay","true")}" 
+                                             data-autoplayonlyfirsttime= "${xf.GetValue($LOS,3,"contentoption","autoplayonlyfirsttime","true")}" 
+                                             data-nextslideatend="${xf.GetValue($LOS,3,"contentoption","nextslideatend","true")}" 
+                                             data-videoattributes= "${xf.GetValue($LOS,3,"contentoption","videoattributes","")}#if(${xf.GetValue($LOS,3,"contentoption","autoplay","true")}== "true")&autoplay=1#end#if(${xf.GetValue($LOS,3,"contentoption","autoplayonlyfirsttime","true")}!= "true")&loop=1&playlist=${xf.GetValue($LOS,3,"contentoption","youtube","")}#end#if(${xf.GetValue($LOS,3,"contentoption","videocontrols","")} !="true")&controls=0&showinfo=0&rel=0#end" 
+                                             data-videowidth= "${xf.GetValue($LOS,3,"contentoption","videowidth","")}" 
+                                             data-videoheight="${xf.GetValue($LOS,3,"contentoption","videoheight","")}" 
+                                             data-videocontrols="${xf.GetValue($LOS,3,"contentoption","videocontrols","")}" 
+                                             
+                                             
+                                        #elseif(${xf.GetValue($LOS,0,"contentoption","vtype","YouTube")} == "Vimeo") 
+                                       
+                                             data-vimeoid="${xf.GetValue($LOS,4,"contentoption","vimeo","")}" 
+                                             data-autoplay="${xf.GetValue($LOS,4,"contentoption","autoplay","true")}" 
+                                             data-autoplayonlyfirsttime="${xf.GetValue($LOS,4,"contentoption","autoplayonlyfirsttime","true")}" 
+                                             data-nextslideatend="${xf.GetValue($LOS,4,"contentoption","nextslideatend","false")}" 
+                                             data-videoattributes="${xf.GetValue($LOS,4,"contentoption","videoattributes","")}#if(${xf.GetValue($LOS,4,"contentoption","autoplay","true")}== "true")&autoplay=1#end#if(${xf.GetValue($LOS,4,"contentoption","autoplayonlyfirsttime","true")}!= "true")&loop=1#end#if(${xf.GetValue($LOS,4,"contentoption","videocontrols","")} !="true")&title=0&byline=0&portrait=0#end" 
+                                             data-videocontrols="${xf.GetValue($LOS,4,"contentoption","videocontrols","")}" 
+                                             data-videowidth="${xf.GetValue($LOS,4,"contentoption","videowidth","")}" 
+                                             data-videoheight="${xf.GetValue($LOS,4,"contentoption","videoheight","")}" 
+                                             
+                                        #else 
+                                              data-videomp4="${xf.Link(${xf.GetValue($LOS,5,"contentoption","mp4","")})}" 
+                                              data-videowebm="${xf.Link(${xf.GetValue($LOS,5,"contentoption","webm","")})}" 
+                                              data-videoogv="${xf.Link(${xf.GetValue($LOS,5,"contentoption","ogv","")})}" 
+                                              data-autoplay="${xf.GetValue($LOS,5,"contentoption","autoplay","")}" 
+                                              data-videoposter="${xf.GetValue($LOS,5,"contentoption","videoposter","")}" 
+                                              data-autoplayonlyfirsttime="${xf.GetValue($LOS,5,"contentoption","autoplayonlyfirsttime","true")}" 
+                                              data-nextslideatend="${xf.GetValue($LOS,5,"contentoption","nextslideatend","true")}" 
+                                              data-videocontrols="${xf.GetValue($LOS,5,"contentoption","videocontrols","")}" 
+                                              data-videpreload="${xf.GetValue($LOS,5,"contentoption","videopreload","none")}" 
+                                              data-forcecover="${xf.GetValue($LOS,5,"contentoption","forcecover","")}" 
+                                              data-forcerewind="${xf.GetValue($LOS,5,"contentoption","forcerewind","off")}" 
+                                              data-aspectratio="${xf.GetValue($LOS,5,"contentoption","aspectratio","16:9")}" 
+                                              data-volume="${xf.GetValue($LOS,5,"contentoption","volume","off")}" 
+                                              data-videowidth="${xf.GetValue($LOS,5,"contentoption","videowidth","")}" 
+                                              data-videoheight="${xf.GetValue($LOS,5,"contentoption","videoheight","")}" 
+                                        #end
+                                    #end
+                                    >
+
+
+                                    #if(${xf.GetValue($LOS,"Othersettings","loopanimations","")} =="rs-wave")
+                                        <div class="rs-wave"  data-speed="2" data-angle="0" data-radius="5" data-origin="50% 50%">
+                                    #elseif(${xf.GetValue($LOS,"Othersettings","loopanimations","")} =="rs-pulse")
+                                        <div class="rs-pulse"  data-easing="Power4.easeInOut" data-speed="2" data-zoomstart="1" data-zoomend="0.95">
+                                    #elseif(${xf.GetValue($LOS,"Othersettings","loopanimations","")} =="rs-pendulum")
+                                        <div class="rs-pendulum"  data-easing="Power1.easeInOut" data-startdeg="-6" data-enddeg="6" data-speed="2" data-origin="50% 75%">
+                                    #elseif(${xf.GetValue($LOS,"Othersettings","loopanimations","")} =="rs-slideloop")
+                                        <div class=" rs-slideloop" data-easing="Power3.easeInOut" data-speed="0.5" data-xs="-5" data-xe="5" data-ys="0" data-ye="0">
+                                    #elseif(${xf.GetValue($LOS,"Othersettings","loopanimations","")} =="rs-rotate")
+                                        <div class=" rs-rotate"  data-easing="Power1.easeInOut" data-startdeg="-6" data-enddeg="6" data-speed="2" data-origin="50% 75%">
+                                    #end
+                                    #if(${xf.GetValue($LOS,0,"contentoption","type","image")} == "image" && ${xf.GetValue($LOS,1,"contentoption","contentimg","")} != "") 
+                                        <img
+                                        #if( ${xf.GetValue($LOS,"styleoption","width","")} != "" || ${xf.GetValue($LOS,"styleoption","height","")} != "")
+                                         style="max-width:100%;max-height:100%;"
+                                        #end
+                                         src="${Module.ModulePath}Effects/${EffectName}/images/dummy.png" data-lazyload="${xf.Link(${xf.GetValue($LOS,1,"contentoption","contentimg","")})}" />
+                                    #elseif(${xf.GetValue($LOS,0,"contentoption","type","image")} == "text" && ${xf.GetValue($LOS,2,"contentoption","contenttext","")} != "") 
+                                        #if(${xf.GetValue($LOS,2,"contentoption","contentcode","div")} != "div") 
+                                          ${xf.GetValue($LOS,2,"contentoption","contenttext","")}
+                                        #else
+                                        ${xf.GetValue($LOS,2,"contentoption","contenttext","")}
+                                        #end
+                                   #end
+                                    #if(${xf.GetValue($LOS,"Othersettings","loopanimations","")} !="" && ${xf.GetValue($LOS,"Othersettings","loopanimations","")} !="none")
+                                      </div>
+                                    #end
+
+
+                                 #if(${xf.GetValue($LOS,"linkoption","Url","")} != "" &&  ${xf.GetValue($LOS,"linkoption","Url","")} != "http://") 
+                                 </a>
+                                #elseif(${xf.GetValue($LOS,0,"contentoption","type","image")} == "text")
+								 </${xf.Rt(${xf.GetValue($LOS,2,"contentoption","contentcode","")} ,"")}> 	
+                                #else
+                                 </div> 
+                                 #end
+                                 
+					        #end
+                        #end
+				    </li>
+                #end
+            #else
+                <li>
+                     <img src="${Module.ModulePath}Resource/images/transparent.png" alt="video_forest" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+                </li>
+            #end
+		</ul>
+	</div>
+</div>
+
+
+<script type="text/javascript" charset="utf-8">
+  
+    jQuery(document).ready(function ($) {
+      
+    if("${xf.ViewXmlSetting("DisplayRandom",'off')}" == "on"){
+     jQuery.fn.randomize = function(selector){
+      var elems = selector ? $(this).find(selector) : $(this).children(),
+          parents = elems.parent();
+
+      parents.each(function(){
+          $(this).children(selector).sort(function(){
+              return Math.round(Math.random()) - 0.5;
+          }).detach().appendTo(this);
+      });
+
+      return this;
+    };
+   $('#LayerGallery${ModuleID} .tp-banner > ul').randomize('li'); 
+  }    
+        if(typeof MobileDetect == "function"){
+        var md = new MobileDetect(window.navigator.userAgent),
+            phone = md.phone(),
+            tablet = md.tablet();
+
+            if(phone){
+                $("#LayerGallery${ModuleID} .tp-slides-item,#LayerGallery${ModuleID} .tp-caption").each(function(){
+                    if($(this).data("displayphone")=="off"){
+                        $(this).remove();
+                    }
+                })
+            }else if(tablet){
+                $("#LayerGallery${ModuleID} .tp-slides-item,#LayerGallery${ModuleID} .tp-caption").each(function(){
+                    if($(this).data("displaytablet")=="off"){
+                        $(this).remove();
+                    }
+                })
+
+            }else{
+                $("#LayerGallery${ModuleID} .tp-slides-item,#LayerGallery${ModuleID} .tp-caption").each(function(){
+                    if($(this).data("displaydesktop")=="off"){
+                        $(this).remove();
+                    }
+                })
+            }
+        }
+
+      
+      
+		$('#LayerGallery${ModuleID} .tp-banner .tp-caption,#LayerGallery${ModuleID} .tp-banner .tp-caption > *').each(function() { $(this).html($(this).html().trim())  });
+        $('#LayerGallery${ModuleID} .tp-banner').show().revolution({
+            delay: ${xf.ViewXmlSetting("delay",5000)}, 
+            startwidth:${xf.ViewXmlSetting("startwidth",1200)},
+            startheight:${xf.ViewXmlSetting("startheight",500)},
+            fullScreenAlignForce:"${xf.ViewXmlSetting("fullScreenAlignForce","off")}",	
+            autoHeight:"${xf.ViewXmlSetting("autoHeight","off")}",
+            hideTimerBar:"${xf.ViewXmlSetting("hideTimerBar","off")}",
+            hideThumbs:${xf.ViewXmlSetting("hideThumbs",200)},
+            hideNavDelayOnMobile:${xf.ViewXmlSetting("hideNavDelayOnMobile",1500)},
+            thumbWidth:${xf.ViewXmlSetting("thumbWidth",100)},
+            thumbHeight:${xf.ViewXmlSetting("thumbHeight",50)},
+            thumbAmount:${xf.ViewXmlSetting("thumbAmount",3)},
+
+            navigationType:"${xf.ViewXmlSetting("navigationType","bullet")}",				
+            navigationArrows: "${xf.ViewXmlSetting("navigationArrows","default")}", 		
+            navigationInGrid:"${xf.ViewXmlSetting("navigationInGrid","off")}",
+            hideThumbsOnMobile:"${xf.ViewXmlSetting("hideThumbsOnMobile","off")}",
+            hideBulletsOnMobile:"${xf.ViewXmlSetting("hideBulletsOnMobile","off")}",
+            hideArrowsOnMobile:"${xf.ViewXmlSetting("hideArrowsOnMobile","off")}",
+            hideThumbsUnderResoluition: ${xf.ViewXmlSetting("hideThumbsUnderResoluition",0)},
+
+            navigationStyle:"${xf.ViewXmlSetting("navigationStyle","round")}",				
+
+            navigationHAlign:"${xf.ViewXmlSetting("navigationHAlign","center")}",				 
+            navigationVAlign:"${xf.ViewXmlSetting("navigationVAlign","bottom")}",					 
+            navigationHOffset:${xf.ViewXmlSetting("navigationHOffset",0)},                     
+            navigationVOffset: ${xf.ViewXmlSetting("navigationVOffset",20)},                    
+
+            soloArrowLeftHalign: "${xf.ViewXmlSetting("soloArrowLeftHalign","left")}",              
+            soloArrowLeftValign: "${xf.ViewXmlSetting("soloArrowLeftValign","center")}",           
+            soloArrowLeftHOffset:${xf.ViewXmlSetting("soloArrowLeftHOffset",20)},                 
+            soloArrowLeftVOffset: ${xf.ViewXmlSetting("soloArrowLeftVOffset",0)},                 
+
+            soloArrowRightHalign: "${xf.ViewXmlSetting("soloArrowRightHalign","right")}",           
+            soloArrowRightValign: "${xf.ViewXmlSetting("soloArrowRightValign","center")}",          
+            soloArrowRightHOffset: ${xf.ViewXmlSetting("soloArrowRightHOffset",20)},                
+            soloArrowRightVOffset: ${xf.ViewXmlSetting("soloArrowRightVOffset",0)},               
+
+            keyboardNavigation:"${xf.ViewXmlSetting("keyboardNavigation","off")}",
+            touchenabled:"${xf.ViewXmlSetting("touchenabled","on")}",						 
+            onHoverStop:"${xf.ViewXmlSetting("onHoverStop","on")}",						 
+            startWithSlide: ${xf.ViewXmlSetting("startWithSlide",0)},
+
+            stopAtSlide:${xf.ViewXmlSetting("stopAtSlide","-1")},							 
+            stopAfterLoops:${xf.ViewXmlSetting("stopAfterLoops","-1")},						 
+            hideCaptionAtLimit:${xf.ViewXmlSetting("hideCaptionAtLimit",0)},					 
+            hideAllCaptionAtLimit:${xf.ViewXmlSetting("hideAllCaptionAtLimit",0)},				 
+            hideSliderAtLimit:${xf.ViewXmlSetting("hideSliderAtLimit",0)},					 
+            fullWidth:"${xf.ViewXmlSetting("fullWidth","off")}",						 
+            fullScreen:"${xf.ViewXmlSetting("fullScreen","off")}",
+            minFullScreenHeight:${xf.ViewXmlSetting("minFullScreenHeight",0)},
+            fullScreenOffsetContainer:"${xf.ViewXmlSetting("fullScreenOffsetContainer","")}",
+            fullScreenOffset: ${xf.ViewXmlSetting("fullScreenOffset",0)},
+            dottedOverlay: "${xf.ViewXmlSetting("dottedOverlay","none")}",
+            forceFullWidth: "${xf.ViewXmlSetting("forceFullWidth","off")}",
+            spinner: "${xf.ViewXmlSetting("spinner","spinner0")}",
+            swipe_treshold: ${xf.ViewXmlSetting("swipe_treshold",75)},
+            swipe_min_touches: ${xf.ViewXmlSetting("swipe_min_touches",1)},
+            drag_block_vertical: ${xf.ViewXmlSetting("drag_block_vertical","true")},
+            parallax: "${xf.ViewXmlSetting("parallax","mouse")}",
+            parallaxLevels: "${xf.ViewXmlSetting("parallaxLevels","")}",
+            parallaxBgFreeze: "${xf.ViewXmlSetting("parallaxBgFreeze","off")}",
+            parallaxOpacity: "${xf.ViewXmlSetting("parallaxOpacity","on")}",
+            parallaxDisableOnMobile: "${xf.ViewXmlSetting("parallaxDisableOnMobile","off")}",
+            panZoomDisableOnMobile: "${xf.ViewXmlSetting("panZoomDisableOnMobile","off")}",
+            simplifyAll: "${xf.ViewXmlSetting("simplifyAll","on")}",
+            minHeight: ${xf.ViewXmlSetting("minHeight",0)},
+            shadow:${xf.ViewXmlSetting("shadow",0)}
+        });
+    });
+</script>
+
+ 
+
+ 
+
+

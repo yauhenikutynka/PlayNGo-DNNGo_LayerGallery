@@ -1,0 +1,598 @@
+<div id="slide_tab1_example<SlideID>" class="tab-pane">
+  <div id="Loading2"></div>
+  <div class="slide-title"><i class="clip-images-3"></i> Main Background <span class="slide_Activate"> 
+    
+      
+            <input type="checkbox" id="display_desktop<SlideID>" value="on"><label for="display_desktop<SlideID>">Display Desktop</label>
+            <input type="checkbox" id="display_tablet<SlideID>" value="on"><label for="display_tablet<SlideID>">Display Tablet</label>
+            <input type="checkbox" id="display_phone<SlideID>" value="on"><label for="display_phone<SlideID>">Display Phone</label>
+
+
+    </span> </div>
+  <div class="tab-content slidetype_content">
+    <ul class="slidetype_nav" id="slidetype_nav<SlideID>" >
+      <li class="active tooltips" data-type="image"  data-original-title="Switch to a image background"> <a data-toggle="tab" href="#slidetype_tab<SlideID>_example1"> <i class="clip-image"></i> Image Background</a> </li>
+      <li class="tooltips" data-type="media"  data-original-title="Switch to a media background"> <a data-toggle="tab" href="#slidetype_tab<SlideID>_example2"> <i class="fa fa-video-camera"></i> Media Background</a> </li>
+      <li class="tooltips" data-original-title="Copy"> <span class="slidecopy" id="slidecopy<SlideID>" data-slidecopy="<SlideID>"><span class="clip-copy-2"></span> Copy</span> </li>
+    </ul>
+    <div id="slidetype_tab<SlideID>_example1" class="tab-pane active">
+      <table class="table slide_table1">
+        <tr>
+          <td width="20%" rowspan="6" scope="col"><div class="fileupimg"> <a  href="#AddMedia_Modal" class="slideimgs imgdemo"  data-toggle="modal" data-href="Resource/templates/modal.html"> <img src="Resource/images/thumbnail.jpg" id="imgs<SlideID>" /> </a>
+              <input type="text" value="" id="bgimg<SlideID>" class="imgtext tooltips form-validation" data-validation="string"  data-original-title="Slide Image Background"  >
+              <div class="upimg"> <a href="#AddMedia_Modal" class="btn btn-primary btn-xs imgdemo"  data-href="Resource/templates/modal.html" data-toggle="modal">Add Image</a> <a href="#" class="btn btn-bricky btn-xs removeimg">Remove</a> </div>
+            </div></td>
+          <td class="title" width="20%" scope="col">Colored Background Instead of Image</td>
+          <td class="title" width="20%" scope="col">Loaded Loading</td>
+          <td class="title" width="20%" scope="col">Background Repeat</td>
+          <td class="title" width="20%" scope="col">Background Fit</td>
+        </tr>
+        <tr>
+          <td><input type="text" class="form-control color-picker tooltips form-validation" data-validation="string" value="" data-colorpicker-guid="1" style="width:100px;" id="bgcolor<SlideID>"   data-original-title="By Colored Background replace Image"></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Lazy Loading">
+              <input type="checkbox" id="lazyload<SlideID>"  >
+            </div></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="bgrepeat<SlideID>"  data-original-title="The way the image is shown in the slide main container">
+              <option>no-repeat</option>
+              <option>repeat</option>
+              <option>repeat-x</option>
+              <option>repeat-y</option>
+            </select></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="bgfit<SlideID>"  data-original-title="Select one to decide how the image should fit in the Slide Main Container">
+              <option value="cover">cover</option>
+              <option value="contain">contain</option>
+              <option value="normal">normal</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td class="title">Background Position</td>
+          <td class="title">Background Position End</td>
+          <td class="title">Ken Burns Effect</td>
+          <td class="title">Alt</td>
+        </tr>
+        <tr>
+          <td><select class="form-control tooltips" style=" width:150px;" id="bgposition<SlideID>" data-original-title="Background Position">
+              <option>left</option>
+              <option>left top</option>
+              <option>left center</option>
+              <option>center bottom </option>
+              <option>center top </option>
+              <option>cente center </option>
+              <option>right bottom</option>
+              <option>right top</option>
+              <option>right center</option>
+              <option>bottom </option>
+            </select></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="bgpositionend<SlideID>"  data-original-title="Background Position End">
+              <option>left</option>
+              <option>left top</option>
+              <option>left center</option>
+              <option>center bottom</option>
+              <option>center top</option>
+              <option>center center </option>
+              <option>right bottom</option>
+              <option>right top</option>
+              <option>right center</option>
+              <option> bottom </option>
+            </select></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="To turn on Ken Burns Effect or keep it disabled.">
+              <input type="checkbox" id="kenburns<SlideID>"  >
+            </div></td>
+          <td><input type="text" class="form-control tooltips" style="width:150px;"  id="imgalt<SlideID>" data-original-title="image alt attributes"></td>
+        </tr>
+        <tr>
+          <td class="title">Background Fit</td>
+          <td class="title">Background Fit End</td>
+          <td class="title">Duration for Ken Burns</td>
+          <td class="title">Easing of Ken Burns Effect</td>
+        </tr>
+        <tr>
+          <td><input type="text" value="200" style="width:150px" class="form-control tooltips form-validation"  data-validation="plusint" id="bgfitother<SlideID>" data-original-title="Select one to decide how the image should fit in the Slide Main Container"/></td>
+          <td><input type="text" value="100"  class="form-control tooltips form-validation" data-validation="plusint" style="width:150px" id="bgfitend<SlideID>" data-original-title="Data-bgfitend: Use only a Number . i.e. 300 will be a 300% Zoomed image where the basic 100% is fitting with width or height.  
+"/></td>
+          <td><input type="text" value="3000"  class="form-control tooltips  form-validation" data-validation="plusint" style="width:150px" id="duration<SlideID>" data-original-title="Data-duration:the value in ms how long the animation of ken burns effect should go. i.e. 3000 will make a 3s zoom and movement.  "/></td>
+          <td><select class="form-control tooltips"  style=" width:150px;" id="ease<SlideID>" data-original-title="The Movement Easing. ">
+              <option disabled="disabled">---New Easings---</option>
+              <option>Linear.easeNone </option>
+              <option>Power0.easeIn (linear)</option>
+              <option>Power0.easeInOut (linear)</option>
+              <option>Power0.easeOut (linear)</option>
+              <option>Power1.easeIn</option>
+              <option>Power1.easeInOut</option>
+              <option>Power1.easeOut</option>
+              <option>Power2.easeIn</option>
+              <option>Power2.easeInOut</option>
+              <option>Power2.easeOut</option>
+              <option>Power3.easeIn</option>
+              <option>Power3.easeInOut</option>
+              <option>Power3.easeOut</option>
+              <option>Power4.easeIn</option>
+              <option>Power4.easeInOut</option>
+              <option>Power4.easeOut</option>
+              <option>Quad.easeIn (same as Power1.easeIn)</option>
+              <option>Quad.easeInOut (same as Power1.easeInOut)</option>
+              <option>Quad.easeOut (same as Power1.easeOut)</option>
+              <option>Cubic.easeIn (same as Power2.easeIn)</option>
+              <option>Cubic.easeInOut (same as Power2.easeInOut)</option>
+              <option>Cubic.easeOut (same as Power2.easeOut)</option>
+              <option>Quart.easeIn (same as Power3.easeIn)</option>
+              <option>Quart.easeInOut (same as Power3.easeInOut)</option>
+              <option>Quart.easeOut (same as Power3.easeOut)</option>
+              <option>Quint.easeIn (same as Power4.easeIn)</option>
+              <option>Quint.easeInOut (same as Power4.easeInOut)</option>
+              <option>Quint.easeOut (same as Power4.easeOut)</option>
+              <option>Strong.easeIn (same as Power4.easeIn)</option>
+              <option>Strong.easeInOut (same as Power4.easeInOut)</option>
+              <option>Strong.easeOut (same as Power4.easeOut)</option>
+              <option>Back.easeIn</option>
+              <option>Back.easeInOut</option>
+              <option>Back.easeOut</option>
+              <option>Bounce.easeIn</option>
+              <option>Bounce.easeInOut</option>
+              <option>Bounce.easeOut</option>
+              <option>Circ.easeIn</option>
+              <option>Circ.easeInOut</option>
+              <option>Circ.easeOut</option>
+              <option>Elastic.easeIn</option>
+              <option>Elastic.easeInOut</option>
+              <option>Elastic.easeOut</option>
+              <option>Expo.easeIn</option>
+              <option>Expo.easeInOut</option>
+              <option>Expo.easeOut</option>
+              <option>Sine.easeIn</option>
+              <option>Sine.easeInOut</option>
+              <option>Sine.easeOut</option>
+              <option>SlowMo.ease</option>
+              <option disabled="disabled">---Old Easings---</option>
+              <option>easeOutBack</option>
+              <option>easeInQuad</option>
+              <option>easeOutQuad</option>
+              <option>easeInOutQuad</option>
+              <option>easeInCubic</option>
+              <option>easeOutCubic</option>
+              <option>easeInOutCubic</option>
+              <option>easeInQuart</option>
+              <option>easeOutQuart</option>
+              <option>easeInOutQuart</option>
+              <option>easeInQuint</option>
+              <option>easeOutQuint</option>
+              <option>easeInOutQuint</option>
+              <option>easeInSine</option>
+              <option>easeOutSine</option>
+              <option>easeInOutSine</option>
+              <option>easeInExpo</option>
+              <option selected="selected">easeOutExpo</option>
+              <option>easeInOutExpo</option>
+              <option>easeInCirc</option>
+              <option>easeOutCirc</option>
+              <option>easeInOutCirc</option>
+              <option>easeInElastic</option>
+              <option>easeOutElastic</option>
+              <option>easeInOutElastic</option>
+              <option>easeInBack</option>
+              <option>easeOutBack</option>
+              <option>easeInOutBack</option>
+              <option>easeInBounce</option>
+              <option>easeOutBounce</option>
+              <option>easeInOutBounce</option>
+            </select></td>
+        </tr>
+      </table>
+    </div>
+    <div id="slidetype_tab<SlideID>_example2" class="tab-pane">
+      <table class="table slide_table1">
+        <tr>
+          <td class="title">Video Type</td>
+          <td class="title">Auto Play</td>
+          <td class="title">Auto Play Only First time</td>
+          <td class="title">Next Slide At End</td>
+          <td class="title">Force Rewind</td>
+          <td class="title">Volume</td>
+          <td class="title">Video Width</td>
+        </tr>
+        <tr>
+          <td><select class="form-control tooltips" style=" width:150px;" id="video<SlideID>"  data-original-title="Video Type">
+              <option>HTML5 Video</option>
+              <option>YouTube Video</option>
+              <option>Vimeo Video</option>
+            </select></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info"  data-original-title="Will play the Video Directly when slider has been loaded">
+              <input type="checkbox" checked  id="autoplay<SlideID>">
+            </div></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After first Autplay the video will not be played automatically">
+              <input type="checkbox"  id="autoplayonlyfirsttime<SlideID>">
+            </div></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After video come to the end position, it swaps to the next slide automatically.">
+              <input type="checkbox"  id="nextslideatend<SlideID>">
+            </div></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info"  data-original-title="Every time the Slide is shown, the Video will rewind to the start.">
+              <input type="checkbox" id="ForceRewind<SlideID>">
+            </div></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info"  data-original-title="If value set to &quot;on&quot;, video will be played muted.">
+              <input type="checkbox" id="volume<SlideID>">
+            </div></td>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint" value="100%" style="width:150px;" id="videowidth<SlideID>" data-original-title="Width of Video (i.e. 500 for 500px, or 100% for 100%)"></td>
+        </tr>
+        <tr>
+          <td class="title">Video Height</td>
+          <td class="title">Aspect Ratio</td>
+          <td class="title">Video Preload</td>
+          <td class="title">Video Poster</td>
+          <td class="title">Video Mp4 (HTML5)</td>
+          <td class="title">Video Webm (HTML5)</td>
+          <td class="title">video Ogv (HTML5)</td>
+        </tr>
+        <tr>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint" value="100%" style="width:150px;" id="videoheight<SlideID>" data-original-title="Height of Video (i.e. 500 for 500px, or 100% for 100%)"></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="aspectratio<SlideID>" data-original-title="&quot;16:9&quot; or &quot;4:3&quot; ">
+              <option>16:9</option>
+              <option>4:3</option>
+            </select></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="videopreload<SlideID>" data-original-title="Which content of Video should be preloaded">
+              <option>none</option>
+              <option>meta</option>
+              <option>auto</option>
+            </select></td>
+          <td><div class="fileupimg fileupimg2"> <a  href="#AddMedia_Modal" class="slideimgs imgdemo"  data-toggle="modal" data-href="Resource/templates/modal.html"> <img src="Resource/images/thumbnail.jpg" id="imgs<SlideID>" width="100" height="56" /> </a>
+              <input type="text" value="" id="videoposter<SlideID>" class="imgtext tooltips form-validation" data-validation="string"  data-original-title="The full path to an image which will be shown as Thumbnail for the Video. (only if autoplay set to false, or autoplayonlyfirsttime set to true)">
+              <div class="upimg"> <a href="#" class="btn btn-bricky btn-xs removeimg">X</a> </div>
+            </div></td>
+          <td><div class="fileupimg">
+              <input type="text" class="form-control imgtext tooltips form-validation" value="http://" id="videomp4<SlideID>" data-validation="string"  style="width:150px;" data-original-title="The MP4 Source for the HTML5 Video">
+            </div></td>
+          <td><div class="fileupimg">
+              <input type="text" class="form-control imgtext tooltips form-validation" value="http://"  id="videowebm<SlideID>" data-validation="string"  style="width:150px;" data-original-title="The WEBM Source for the HTML5 Video">
+            </div></td>
+          <td><div class="fileupimg">
+              <input type="text" class="form-control imgtext tooltips form-validation" value="http://" id="videoogv<SlideID>" data-validation="string"  style="width:150px;" data-original-title="The OGV Source for the HTML5 Video">
+            </div></td>
+        </tr>
+        <tr>
+          <td class="title">YouTube ID </td>
+          <td class="title">Vimeo ID</td>
+          <td class="title">Video Controls</td>
+          <td class="title">Video Attributes </td>
+          <td class="title">Video Loop (HTML5)</td>
+          <td class="title">Force Cover (HTML5)</td>
+          <td class="title">Speed</td>
+        </tr>
+        <tr>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  value="" id="ytid<SlideID>" style="width:150px;" data-original-title="The YouTube ID of the Video"></td>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  value="" id="vimeoid<SlideID>" style="width:150px;" data-original-title="The Vimeo ID of the Video"></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Show/Hide the controls of the Video">
+              <input type="checkbox" id="videocontrols<SlideID>">
+            </div></td>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="string" value="" id="videoattributes<SlideID>"  data-original-title="Further Video Attributes for not listed Options and Settings of Video. Used for YouTube and Vimeo like &quot; enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0 &quot;"></td>
+          <td><select class="form-control tooltips" style=" width:150px;" id="videoloop<SlideID>" data-original-title="Loop HTML5 Videos -  &quot;none&quot;,&quot;loop&quot;,&quot;loopandnoslidestop&quot;loop and no slide stop will loop the video, but as soon the video Timer reached the endpoint, next slide will be started. ">
+              <option>none</option>
+              <option>loop</option>
+              <option>loopandnoslidestop</option>
+            </select></td>
+          <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Used only at HTML5 Videos. In case it is selected, the Videos will be resized to cover the full Slider size.">
+              <input type="checkbox" checked="checked" id="forcecover<SlideID>">
+            </div></td>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint" value="600" style="width:150px;" id="sbgspeed<SlideID>" data-original-title="The speed in milliseconds of the transition to move the Caption in the Slide at the defined  timepoint."></td>
+        </tr>
+        <tr>
+          <td class="title">Start</td>
+          <td class="title">Easing</td>
+          <td class="title">End Speed</td>
+          <td class="title">End Easing</td>
+          <td class="title">In Coming Animation </td>
+          <td class="title">Out Going Animation </td>
+          <td class="title"></td>
+        </tr>
+        <tr>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint" value="1000" style="width:150px;" id="sbgstart<SlideID>" data-original-title="The timepoint in millisecond when/at the Caption should move in to the slide."></td>
+          <td><select class="form-control tooltips"  style=" width:150px;" id="sbgease<SlideID>" data-original-title="The Easing Art how the caption is moved in to the slide (note! Animation art set via Classes !).">
+              <option disabled="disabled">---New Easings---</option>
+              <option>Linear.easeNone </option>
+              <option>Power0.easeIn (linear)</option>
+              <option>Power0.easeInOut (linear)</option>
+              <option>Power0.easeOut (linear)</option>
+              <option>Power1.easeIn</option>
+              <option>Power1.easeInOut</option>
+              <option>Power1.easeOut</option>
+              <option>Power2.easeIn</option>
+              <option>Power2.easeInOut</option>
+              <option>Power2.easeOut</option>
+              <option>Power3.easeIn</option>
+              <option>Power3.easeInOut</option>
+              <option>Power3.easeOut</option>
+              <option>Power4.easeIn</option>
+              <option>Power4.easeInOut</option>
+              <option>Power4.easeOut</option>
+              <option>Quad.easeIn (same as Power1.easeIn)</option>
+              <option>Quad.easeInOut (same as Power1.easeInOut)</option>
+              <option>Quad.easeOut (same as Power1.easeOut)</option>
+              <option>Cubic.easeIn (same as Power2.easeIn)</option>
+              <option>Cubic.easeInOut (same as Power2.easeInOut)</option>
+              <option>Cubic.easeOut (same as Power2.easeOut)</option>
+              <option>Quart.easeIn (same as Power3.easeIn)</option>
+              <option>Quart.easeInOut (same as Power3.easeInOut)</option>
+              <option>Quart.easeOut (same as Power3.easeOut)</option>
+              <option>Quint.easeIn (same as Power4.easeIn)</option>
+              <option>Quint.easeInOut (same as Power4.easeInOut)</option>
+              <option>Quint.easeOut (same as Power4.easeOut)</option>
+              <option>Strong.easeIn (same as Power4.easeIn)</option>
+              <option>Strong.easeInOut (same as Power4.easeInOut)</option>
+              <option>Strong.easeOut (same as Power4.easeOut)</option>
+              <option>Back.easeIn</option>
+              <option>Back.easeInOut</option>
+              <option>Back.easeOut</option>
+              <option>Bounce.easeIn</option>
+              <option>Bounce.easeInOut</option>
+              <option>Bounce.easeOut</option>
+              <option>Circ.easeIn</option>
+              <option>Circ.easeInOut</option>
+              <option>Circ.easeOut</option>
+              <option>Elastic.easeIn</option>
+              <option>Elastic.easeInOut</option>
+              <option>Elastic.easeOut</option>
+              <option>Expo.easeIn</option>
+              <option>Expo.easeInOut</option>
+              <option>Expo.easeOut</option>
+              <option>Sine.easeIn</option>
+              <option>Sine.easeInOut</option>
+              <option>Sine.easeOut</option>
+              <option>SlowMo.ease</option>
+              <option disabled="disabled">---Old Easings---</option>
+              <option>easeOutBack</option>
+              <option>easeInQuad</option>
+              <option>easeOutQuad</option>
+              <option>easeInOutQuad</option>
+              <option>easeInCubic</option>
+              <option>easeOutCubic</option>
+              <option>easeInOutCubic</option>
+              <option>easeInQuart</option>
+              <option>easeOutQuart</option>
+              <option>easeInOutQuart</option>
+              <option>easeInQuint</option>
+              <option>easeOutQuint</option>
+              <option>easeInOutQuint</option>
+              <option>easeInSine</option>
+              <option>easeOutSine</option>
+              <option>easeInOutSine</option>
+              <option>easeInExpo</option>
+              <option selected="selected">easeOutExpo</option>
+              <option>easeInOutExpo</option>
+              <option>easeInCirc</option>
+              <option>easeOutCirc</option>
+              <option>easeInOutCirc</option>
+              <option>easeInElastic</option>
+              <option>easeOutElastic</option>
+              <option>easeInOutElastic</option>
+              <option>easeInBack</option>
+              <option>easeOutBack</option>
+              <option>easeInOutBack</option>
+              <option>easeInBounce</option>
+              <option>easeOutBounce</option>
+              <option>easeInOutBounce</option>
+            </select></td>
+          <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint" value="500" style="width:150px;"  id="sbgendspeed<SlideID>" data-original-title=" The speed in milliseconds of the transition to move the Caption out from the Slide at the defined  timepoint."></td>
+          <td><select class="form-control tooltips"  style=" width:150px;" id="sbgendeasing<SlideID>" data-original-title="The Easing Art how the caption is moved out from the slide (note! Animation art set via Classes !). ">
+              <option disabled="disabled">---New Easings---</option>
+              <option>Linear.easeNone </option>
+              <option>Power0.easeIn (linear)</option>
+              <option>Power0.easeInOut (linear)</option>
+              <option>Power0.easeOut (linear)</option>
+              <option>Power1.easeIn</option>
+              <option>Power1.easeInOut</option>
+              <option>Power1.easeOut</option>
+              <option>Power2.easeIn</option>
+              <option>Power2.easeInOut</option>
+              <option>Power2.easeOut</option>
+              <option>Power3.easeIn</option>
+              <option>Power3.easeInOut</option>
+              <option>Power3.easeOut</option>
+              <option>Power4.easeIn</option>
+              <option>Power4.easeInOut</option>
+              <option>Power4.easeOut</option>
+              <option>Quad.easeIn (same as Power1.easeIn)</option>
+              <option>Quad.easeInOut (same as Power1.easeInOut)</option>
+              <option>Quad.easeOut (same as Power1.easeOut)</option>
+              <option>Cubic.easeIn (same as Power2.easeIn)</option>
+              <option>Cubic.easeInOut (same as Power2.easeInOut)</option>
+              <option>Cubic.easeOut (same as Power2.easeOut)</option>
+              <option>Quart.easeIn (same as Power3.easeIn)</option>
+              <option>Quart.easeInOut (same as Power3.easeInOut)</option>
+              <option>Quart.easeOut (same as Power3.easeOut)</option>
+              <option>Quint.easeIn (same as Power4.easeIn)</option>
+              <option>Quint.easeInOut (same as Power4.easeInOut)</option>
+              <option>Quint.easeOut (same as Power4.easeOut)</option>
+              <option>Strong.easeIn (same as Power4.easeIn)</option>
+              <option>Strong.easeInOut (same as Power4.easeInOut)</option>
+              <option>Strong.easeOut (same as Power4.easeOut)</option>
+              <option>Back.easeIn</option>
+              <option>Back.easeInOut</option>
+              <option>Back.easeOut</option>
+              <option>Bounce.easeIn</option>
+              <option>Bounce.easeInOut</option>
+              <option>Bounce.easeOut</option>
+              <option>Circ.easeIn</option>
+              <option>Circ.easeInOut</option>
+              <option>Circ.easeOut</option>
+              <option>Elastic.easeIn</option>
+              <option>Elastic.easeInOut</option>
+              <option>Elastic.easeOut</option>
+              <option>Expo.easeIn</option>
+              <option>Expo.easeInOut</option>
+              <option>Expo.easeOut</option>
+              <option>Sine.easeIn</option>
+              <option>Sine.easeInOut</option>
+              <option>Sine.easeOut</option>
+              <option>SlowMo.ease</option>
+              <option disabled="disabled">---Old Easings---</option>
+              <option>easeOutBack</option>
+              <option>easeInQuad</option>
+              <option>easeOutQuad</option>
+              <option>easeInOutQuad</option>
+              <option>easeInCubic</option>
+              <option>easeOutCubic</option>
+              <option>easeInOutCubic</option>
+              <option>easeInQuart</option>
+              <option>easeOutQuart</option>
+              <option>easeInOutQuart</option>
+              <option>easeInQuint</option>
+              <option>easeOutQuint</option>
+              <option>easeInOutQuint</option>
+              <option>easeInSine</option>
+              <option>easeOutSine</option>
+              <option>easeInOutSine</option>
+              <option>easeInExpo</option>
+              <option selected="selected">easeOutExpo</option>
+              <option>easeInOutExpo</option>
+              <option>easeInCirc</option>
+              <option>easeOutCirc</option>
+              <option>easeInOutCirc</option>
+              <option>easeInElastic</option>
+              <option>easeOutElastic</option>
+              <option>easeInOutElastic</option>
+              <option>easeInBack</option>
+              <option>easeOutBack</option>
+              <option>easeInOutBack</option>
+              <option>easeInBounce</option>
+              <option>easeOutBounce</option>
+              <option>easeInOutBounce</option>
+            </select></td>
+          <td><select class="form-control tooltips" style="width:150px;" id="incoming<SlideID>" data-original-title="Incoming animation Classes">
+              <option value="sft">Short from Top</option>
+              <option value="sfb">Short from Bottom</option>
+              <option value="sfr">Short from Right</option>
+              <option value="sfl">Short from Left</option>
+              <option value="lft">Long from Top</option>
+              <option value="lfb">Long from Bottom</option>
+              <option value="lfr">Long from Right</option>
+              <option value="lfl">Long from Left</option>
+              <option value="skewfromleft">Skew from Left</option>
+              <option value="skewfromright">Skew from Right </option>
+              <option value="skewfromleftshort">Skew Short from Left </option>
+              <option value="skewfromrightshort">Skew Short from Right </option>
+              <option value="fade" selected>fading </option>
+              <option value="randomrotate"> Fade in, Rotate from a Random position and Degree</option>
+            </select></td>
+          <td><select class="form-control tooltips" style="width:150px;" id="outgoing<SlideID>" data-original-title="Outgoing animation Classes">
+              <option value="stt">Short to Top </option>
+              <option value="stb">Short to Bottom </option>
+              <option value="str">Short to Right </option>
+              <option value="stl">Short to Left </option>
+              <option value="ltt">Long to Top </option>
+              <option value="ltb">Long to Bottom </option>
+              <option value="ltr">Long to Right </option>
+              <option value="ltl">Long to Left </option>
+              <option value="skewtoleft">Skew to Left </option>
+              <option value="skewtoright">Skew to Right </option>
+              <option value="skewtoleftshort">Skew Short to Left </option>
+              <option value="skewtorightshort">Skew Short to Right </option>
+              <option value="fadeout" selected>fading </option>
+              <option value="randomrotateout">Fade in, Rotate from a Random position and Degree</option>
+            </select></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="slide-title"><i class="clip-wrench"></i> Slide Options</div>
+  <div class="slide-content slideoptions">
+    <table class="table slide_table1">
+      <tr>
+        <td width="16.66%" class="title">Transition</td>
+        <td width="16.66%" class="title">Random Transition </td>
+        <td width="16.66%" class="title">Slot Amount </td>
+        <td width="16.66%" class="title">Master Speed</td>
+        <td width="16.66%" class="title">Delay</td>
+        <td width="16.66%" class="title">Slide Index</td>
+      </tr>
+      <tr>
+        <td rowspan="3"><select class="form-control tooltips" multiple="multiple" style=" width:250px; height:130px;" id="Transition<SlideID>" data-original-title="The appearance transition of this slide. You can define more than one, so in each loop the next slide transition type will be shown.">
+            <option disabled="disabled">------Flat Transitions------</option>
+            <option selected="selected">slideup</option>
+            <option>slidedown</option>
+            <option>slideright</option>
+            <option>slideleft</option>
+            <option>slidehorizontal</option>
+            <option>slidevertical</option>
+            <option>boxslide</option>
+            <option>slotslide-horizontal</option>
+            <option>slotslide-vertical</option>
+            <option>boxfade</option>
+            <option>slotfade-horizontal</option>
+            <option>slotfade-vertical</option>
+            <option>fadefromright</option>
+            <option>fadefromleft</option>
+            <option>fadefromtop</option>
+            <option>fadefrombottom</option>
+            <option>fadetoleftfadefromright</option>
+            <option>fadetorightfadefromleft</option>
+            <option>fadetotopfadefrombottom</option>
+            <option>fadetobottomfadefromtop</option>
+            <option>parallaxtoright</option>
+            <option>parallaxtoleft</option>
+            <option>parallaxtotop</option>
+            <option>parallaxtobottom</option>
+            <option>scaledownfromright</option>
+            <option>scaledownfromleft</option>
+            <option>scaledownfromtop</option>
+            <option>scaledownfrombottom</option>
+            <option>zoomout</option>
+            <option>zoomin</option>
+            <option>slotzoom-horizontal</option>
+            <option>slotzoom-vertical</option>
+            <option>fade</option>
+            <option>random-static</option>
+            <option>random</option>
+            <option disabled="disabled">-------Premium Transitions-------</option>
+            <option>curtain-1</option>
+            <option>curtain-2</option>
+            <option>curtain-3</option>
+            <option>horizontal</option>
+            <option> 3dcurtain-vertical</option>
+            <option>cube</option>
+            <option>cube-horizontal</option>
+            <option>incube</option>
+            <option>incube-horizontal</option>
+            <option>turnoff</option>
+            <option>turnoff-vertical</option>
+            <option>papercut</option>
+            <option>flyin</option>
+            <option>random-premium</option>
+            <option>random</option>
+          </select></td>
+        <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="This will allow a Random transitions of the Selected Transitions you choosed in the data-transitions. Dont use together with random premium and random flat transitions ! ">
+            <input type="checkbox" id="RandomTransition<SlideID>">
+          </div></td>
+        <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint" value="0" style="width:50px;" id="SlotAmount<SlideID>" data-original-title="The number of slots or boxes the slide is divided into. If you use boxfade, over 7 slots can be juggy."></td>
+        <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint"  value="300" style="width:50px;" id="MasterSpeed<SlideID>" data-original-title="The speed of the transition in &quot;ms&quot;.  default value is 300 (0.3 sec)"></td>
+        <td><input type="text" class="form-control tooltips form-validation" data-validation="plusint" value="" style="width:50px;" id="SlideDelay<SlideID>" data-original-title="A new Dealy value for the Slide. If no delay defined per slide, the dealy defined via Options will be used"></td>
+        <td><input class="form-control tooltips"  type="text" value="1"  style="width:50px;" id="SlideIndex<SlideID>" data-original-title="Possible values:  next,back, 1-x (where x is the max. Amount of slide) If this value is set, click on slide will call the next / previous, or  n th Slide."></td>
+      </tr>
+      <tr>
+        <td class="title">Link URL</td>
+        <td class="title">Target</td>
+        <td class="title">Thumbnail</td>
+        <td class="title">Title</td>
+        <td class="title"></td>
+      </tr>
+      <tr>
+        <td><input class="form-control tooltips form-validation" data-validation="string" style="text-align:left;" type="text" value="http://" id="LinkURL<SlideID>" data-original-title="A link on the whole slide pic"></td>
+        <td ><select class="form-control tooltips" style=" width:100px;" id="Target<SlideID>" data-original-title="The target of the Link for the whole slide pic. ">
+            <option>_blank</option>
+            <option>_parent</option>
+            <option>_self</option>
+            <option>_top</option>
+            <option>new</option>
+          </select></td>
+        <td><div class="fileupimg fileupimg2"> <a  href="#AddMedia_Modal" class="slideimgs imgdemo"  data-toggle="modal" data-href="Resource/templates/modal.html"> <img src="Resource/images/thumbnail.jpg" id="imgs<SlideID>" width="100" height="56" /> </a>
+            <input type="text" value="" id="Thumbnail<SlideID>" class="imgtext tooltips"  data-original-title="An Alternative Source for thumbs. If not defined a copy of the background image will be used in resized form">
+            <div class="upimg"> <a href="#" class="btn btn-bricky btn-xs removeimg">X</a> </div>
+          </div></td>
+        <td><input class="form-control tooltips  form-validation" data-validation="string" style="text-align:left;" type="text"  id="Title<SlideID>" data-original-title="In Navigation Style Preview1- preview4 mode you can show the Title of the Slides also. Due this option you can define for each slide its own Title"></td>
+        <td ></td>
+      </tr>
+    </table>
+  </div>
+  <div class="slide-title"><i class="clip-stack "></i> Layers</div>
+  <ul id="layers-accordion<SlideID>" class="panel-group slide-accordion">
+  </ul>
+  <div class="add-layer" > <span id="add-layer<SlideID>"> <i class="clip-plus-circle-2 ico-add"></i> Add new layer</span> </div>
+</div>

@@ -1,0 +1,849 @@
+<li class="panel panel-default" id="panel<SlideID>_<LayersID>" data-id="<LayersID>" data-new="<LayersID>">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+    <a href="#collapse<SlideID>_<LayersID>" data-parent="#layers-accordion<SlideID>" data-toggle="collapse" class="accordion-toggle collapsed"> 
+    <i class="clip-tag-2 ico-tag-2"></i>
+    <i class="drag clip-arrow-4"></i>
+    
+    </a> 
+    
+    <span class="edit_name">
+      <input type="text" value="Item #<LayersID>" id="Item<SlideID>_<LayersID>" class="form-validation" data-validation="string">
+      </span> </h4>
+  </div>
+  <div class="panel-collapse collapse" id="collapse<SlideID>_<LayersID>">
+    <div class="layer-tabs" >
+      <ul>
+        <li class="active"> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example1"> Content </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example2"> Data Settings </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example3"> Other Settings </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example4"> Transition </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example5"> Link </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example6"> Styles </a> </li>
+        <li> <a data-toggle="tab" href="#layer_tab<SlideID>_<LayersID>_example7"> Attributes </a> </li>
+        <li > <span class="layerscopy" id="slidecopy<SlideID>_<LayersID>" data-layerscopy="<SlideID>,<LayersID>"><span class="clip-copy-2"></span> Copy</span></li>
+      </ul>
+      <i class="clip-cancel-circle-2 ico-close" id="dellayer<SlideID>_<LayersID>" delid="<SlideID>_<LayersID>"></i> </div>
+    <div class="tab-content layer-tab-content ">
+      <div id="layer_tab<SlideID>_<LayersID>_example1" class="tab-pane in active">
+        <div class="center">
+          <ul class="layercontent_tab tooltips" id="layercontent_tab<SlideID>_<LayersID>" data-original-title="Content Type">
+            <li data-type="image"> <a data-toggle="tab" href="#layercontent_tab<SlideID>_<LayersID>_example1"><i class="clip-image"></i> Image </a> </li>
+            <li class="active" data-type="text"> <a data-toggle="tab" href="#layercontent_tab<SlideID>_<LayersID>_example2"><i class="clip-code"></i> Text </a> </li>
+            <li data-type="video"> <a data-toggle="tab" href="#layercontent_tab<SlideID>_<LayersID>_example3"><i class="clip-youtube"></i> Video </a> </li>
+          </ul>
+        </div>
+        <div class="tab-content layercontent-tab-content">
+            <div id="layercontent_tab<SlideID>_<LayersID>_example1" class="tab-pane layercontent_image ">
+              <div class="fileupimg"> <a  href="#AddMedia_Modal" class="slideimgs imgdemo"  data-toggle="modal" data-href="Resource/templates/modal.html"> <img src="Resource/images/thumbnail.jpg" id="imgs<SlideID>" /> </a>
+              <input type="text" class="form-control imgtext tooltips form-validation" data-validation="string" value=""  id="contentimg<SlideID>_<LayersID>" style="width:200px; margin:auto;" data-original-title="Image  Content"/>
+              <div class="upimg"> <a href="#AddMedia_Modal" class="btn btn-primary btn-xs imgdemo"  data-href="Resource/templates/modal.html" data-toggle="modal">Add Image</a> <a href="#" class="btn btn-bricky btn-xs removeimg">Remove</a> </div>
+            </div>
+          </div>
+          <div id="layercontent_tab<SlideID>_<LayersID>_example2" class="tab-pane active">
+            <div class="layercontent_code" id="contentcode<SlideID>_<LayersID>"> 
+            <span data-code="div"  class="active">&lt;DIV&gt;</span>
+            <span data-code="h1">&lt;H1&gt;</span> <span data-code="h2">&lt;H2&gt;</span> <span data-code="h3">&lt;H3&gt;</span> <span data-code="h4">&lt;H4&gt;</span> <span data-code="h5">&lt;H5&gt;</span> <span data-code="h6">&lt;H6&gt;</span>  </div>
+            <div class="layercontent_text">
+              <textarea class="form-control tooltips form-validation" data-validation="string" rows="10" id="contenttext<SlideID>_<LayersID>"  data-original-title="Text Content"></textarea>
+            </div>
+          </div>
+          <div id="layercontent_tab<SlideID>_<LayersID>_example3" class="tab-pane">
+            <ul class="layercontent_video tooltips" id="layervideo<SlideID>_<LayersID>"  data-original-title="Vimeo Type">
+              <li data-type="YouTube"><a data-toggle="tab" href="#layervideo_tab<SlideID>_<LayersID>_example1">YouTube Video</a></li>
+              <li data-type="Vimeo"><a data-toggle="tab" href="#layervideo_tab<SlideID>_<LayersID>_example2">Vimeo Video</a></li>
+              <li class="active" data-type="HTML5"><a data-toggle="tab" href="#layervideo_tab<SlideID>_<LayersID>_example3">HTML5 Video</a></li>
+            </ul>
+            <div class="tab-content layercontent_vContent">
+              <div id="layervideo_tab<SlideID>_<LayersID>_example1" class="tab-pane tab-youtubeoption ">
+                <table class="table  video-option ">
+                  <tbody>
+                    <tr>
+                      <th>YouTube ID:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  id="ytb<SlideID>_<LayersID>" data-original-title="The YouTube ID of the Video"/></td>
+                      <th>AutoPlay:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Will play the Video Directly when slider has been loaded ">
+                          <input type="checkbox" checked id="ytbautoplay<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>AutoPlay Only First Time:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After first Autplay the video will not be played automatically  ">
+                          <input type="checkbox" checked id="ytbautoplayoft<SlideID>_<LayersID>">
+                        </div></td>
+                      <th>Next Slide At End:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After video come to the end position, it swaps to the next slide automatically.">
+                          <input type="checkbox" checked id="ytbnext<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video attributes:</th>
+                      <td><input type="text" class="form-control tooltips"  id="ytbattributes<SlideID>_<LayersID>" data-original-title="Further Video Attributes for not listed Options and Settings of Video. Used for YouTube and Vimeo like &quot; enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0 &quot; "></td>
+                      <th>Video Controls:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Show/Hide the controls of the Video.">
+                          <input type="checkbox"  id="ytbcontrols<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video Width:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint" id="ytbwidth<SlideID>_<LayersID>" data-original-title="Width of Video (i.e. 500 for 500px, or 100% for 100%)"></td>
+                      <th>Video Height:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint"   id="ytbheight<SlideID>_<LayersID>" data-original-title="Height of Video (i.e. 500 for 500px, or 100% for 100%"></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+              <div id="layervideo_tab<SlideID>_<LayersID>_example2" class="tab-pane tab-youtubeoption">
+                <table class="table  video-option ">
+                  <tbody>
+                    <tr>
+                      <th>Vimeo ID:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  id="vimeo<SlideID>_<LayersID>" data-original-title="The Vimeo ID of the Video"/></td>
+                      <th>AutoPlay:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Will play the Video Directly when slider has been loaded ">
+                          <input type="checkbox" checked  id="vimeoautoplay<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>AutoPlay Only First Time:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After first Autplay the video will not be played automatically ">
+                          <input type="checkbox" checked  id="vimeoautoplayoft<SlideID>_<LayersID>">
+                        </div></td>
+                      <th>Next Slide At End:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After video come to the end position, it swaps to the next slide automatically.">
+                          <input type="checkbox" checked id="vimeonfae<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video attributes:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  id="vimeoattributes<SlideID>_<LayersID>" data-original-title="Further Video Attributes for not listed Options and Settings of Video. Used for YouTube and Vimeo like &quot; enablejsapi=1&html5=1&hd=1&wmode=opaque&showinfo=0&rel=0 &quot;"></td>
+                      <th>Video Controls:</th>
+                      <td><div class="make-switch" data-on="primary" data-off="info" data-original-title="Show/Hide the controls of the Video.">
+                          <input type="checkbox"  id="vimeocontrols<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video Width:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint"  id="vimeowidth<SlideID>_<LayersID>" data-original-title="Width of Video (i.e. 500 for 500px, or 100% for 100%)"></td>
+                      <th>Video Height:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint"  id="vimeoheight<SlideID>_<LayersID>" data-original-title="Height of Video (i.e. 500 for 500px, or 100% for 100%)"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="layervideo_tab<SlideID>_<LayersID>_example3" class="tab-pane tab-youtubeoption active">
+                <table class="table  video-option ">
+                  <tbody>
+                    <tr>
+                      <th>Mp4:</th>
+                      <td><div class="fileupimg" data-provides="fileupload">
+                          <input type="text" class="form-control imgtext tooltips form-validation" data-validation="string" value="http://" id="html5mp4<SlideID>_<LayersID>" style="width:150px;"  data-original-title="The MP4 Source for the HTML5 Video">
+                      <!--    <div class="upimg"> <a href="#AddMedia_Modal" class="btn btn-primary btn-xs imgdemo"  data-href="Resource/templates/modal.html" data-toggle="modal">Add MP4</a> <a href="#" class="btn btn-bricky btn-xs removeimg">Remove</a> </div> -->
+                        </div></td>
+                      <th>Webm:</th>
+                      <td><div class="fileupimg" data-provides="fileupload" >
+                          <input type="text" class="form-control imgtext tooltips form-validation" data-validation="string" value="http://" id="html5webm<SlideID>_<LayersID>" style="width:150px;" data-original-title="The WEBM Source for the HTML5 Video">
+                         <!--   <div class="upimg"> <a href="#AddMedia_Modal" class="btn btn-primary btn-xs imgdemo"  data-href="Resource/templates/modal.html" data-toggle="modal">Add WEBM</a> <a href="#" class="btn btn-bricky btn-xs removeimg">Remove</a> </div> -->
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Ogg:</th>
+                      <td>
+                         <div class="fileupimg" data-provides="fileupload" >
+                          <input type="text" class="form-control imgtext tooltips form-validation" data-validation="string" value="http://" id="html5ogg<SlideID>_<LayersID>" style="width:150px;" data-original-title="The OGV Source for the HTML5 Video">
+                      <!--      <div class="upimg"> <a href="#AddMedia_Modal" class="btn btn-primary btn-xs imgdemo"  data-href="Resource/templates/modal.html" data-toggle="modal">Add OGV</a> <a href="#" class="btn btn-bricky btn-xs removeimg">Remove</a> </div> -->
+                        </div> 
+                          
+                          </td>
+                      <th>Poster:</th>
+                      <td><div class="fileupimg fileupimg2"> <a  href="#AddMedia_Modal" class="slideimgs imgdemo"  data-toggle="modal" data-href="Resource/templates/modal.html"> <img src="Resource/images/thumbnail.jpg" id="imgs<SlideID>" width="100" height="56" /> </a>
+                          <input type="text" value="" id="html5poster<SlideID>_<LayersID>" class="imgtext tooltips form-validation" data-validation="string" data-original-title="The full path to an image which will be shown as Thumbnail for the Video. (only if autoplay set to false, or autoplayonlyfirsttime set to true)">
+                          <div class="upimg"> <a href="#" class="btn btn-bricky btn-xs removeimg">X</a> </div>
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>AutoPlay:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Will play the Video Directly when slider has been loaded ">
+                          <input type="checkbox" checked id="html5autoplay<SlideID>_<LayersID>">
+                        </div></td>
+                      <th>AutoPlay Only First Time:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After first Autplay the video will not be played automatically  ">
+                          <input type="checkbox" id="html5autoplayft<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Next Slide At End:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="After video come to the end position, it swaps to the next slide automatically.">
+                          <input type="checkbox" checked id="html5nsae<SlideID>_<LayersID>">
+                        </div></td>
+                      <th>Video Controls:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Show/Hide the controls of the Video">
+                          <input type="checkbox"  id="html5controls<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video forcecover:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="string"  id="html5forcecover<SlideID>_<LayersID>" data-original-title="Used only at HTML5 Videos. In case it is selected, the Videos will be resized to cover the full Slider size."></td>
+                      <th>Video forcerewind</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Every time the Slide is shown, the Video will rewind to the start.">
+                          <input type="checkbox"  id="html5forcerewind<SlideID>_<LayersID>">
+                        </div></td>
+                    </tr>
+                    <tr>
+                      <th>Video aspectratio:</th>
+                      <td><select class="form-control tooltips" id="html5aspectratio<SlideID>_<LayersID>" data-original-title="&quot;16:9&quot; or &quot;4:3&quot;">
+                          <option>16:9</option>
+                          <option>4:3</option>
+                        </select></td>
+                      <th>Video preload:</th>
+                      <td><select class="form-control tooltips" id="html5preload<SlideID>_<LayersID>" data-original-title="Which content of Video should be preloaded.">
+                          <option>none</option>
+                          <option>meta</option>
+                          <option>auto</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <th>Video Width:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint"  id="html5width<SlideID>_<LayersID>" data-original-title="Width of Video "></td>
+                      <th>Video Height:</th>
+                      <td><input type="text" class="form-control tooltips form-validation" data-validation="unitint"  id="html5height<SlideID>_<LayersID>" data-original-title="Height of Video "></td>
+                    </tr>
+                    <tr>
+                      <th>Video volume:</th>
+                      <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="If value set to &quot;on&quot;, video will be played muted.">
+                          <input type="checkbox"  id="html5volume<SlideID>_<LayersID>">
+                        </div></td>
+                      <th></th>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="responsive_layers">
+              <input type="checkbox" checked id="display_desktop_<SlideID>_<LayersID>"><label for="display_desktop_<SlideID>_<LayersID>">Display Desktop</label>
+              <input type="checkbox" checked id="display_tablet_<SlideID>_<LayersID>"><label for="display_tablet_<SlideID>_<LayersID>">Display Tablet</label>
+              <input type="checkbox" checked id="display_phone_<SlideID>_<LayersID>"><label for="display_phone_<SlideID>_<LayersID>">Display Phone</label>
+          </div>
+          
+
+        </div>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example2" class="tab-pane">
+        <table class="table styles-option" >
+          <tr>
+            <td width="14%">data-x</td>
+            <td width="14%">data-y</td>
+            <td width="14%">data-hoffset</td>
+            <td width="14%">data-voffset</td>
+            <td width="14%">data-speed</td>
+            <td width="14%">data-splitin(Text)</td>
+            <td width="14%">data-elementdelay</td>
+          </tr>
+          <tr>
+            <td><input type="text" value="0"  class="form-control tooltips form-validation" data-validation="highint" id="datax<SlideID>_<LayersID>" data-original-title="Possible Values are &quot;left&quot;, &quot;center&quot;, &quot;right&quot;, or any Value between -2500  and 2500."></td>
+            <td><input type="text" value="0"  class="form-control tooltips form-validation" data-validation="highint"  id="datay<SlideID>_<LayersID>" data-original-title="Possible Values are &quot;top&quot;, &quot;center&quot;, &quot;bottom&quot;, or any Value between -2500  and 2500. "></td>
+            <td><input type="text" value="0"  class="form-control tooltips form-validation" data-validation="highint"  id="datahoffset<SlideID>_<LayersID>" data-original-title="Only works if data-x set to left/center/right. It will move the Caption with the defined "px" from the aligned position."></td>
+            <td><input type="text" value="0"  class="form-control tooltips form-validation" data-validation="highint"  id="datavoffset<SlideID>_<LayersID>" data-original-title="Only works if data-y set to top/center/bottom. It will move the Caption with the defined "px" from the aligned position"></td>
+            <td><input type="text" value="500"  class="form-control tooltips form-validation" data-validation="plusint"  id="dataspeed<SlideID>_<LayersID>" data-original-title="The speed in milliseconds of the transition to move the Caption in the Slide at the defined  timepoint."></td>
+            <td><select class="form-control tooltips"  id="datasplitin<SlideID>_<LayersID>" data-original-title="This will create amazing Animation Effects on one go, without the needs to create more captions.">
+                <option>none</option>
+                <option>words</option>
+                <option>chars</option>
+                <option>lines</option>
+              </select></td>
+            <td><input type="text" value="0.1"  class="form-control tooltips form-validation" data-validation="floating"  id="dataelementdelay<SlideID>_<LayersID>" data-original-title="A Value between 0 and 1 like 0.1 to make delays between the Splitted Text Element (start) Animations."></td>
+          </tr>
+          <tr>
+            <td>data-splitout(Text)</td>
+            <td>data-endelementdelay</td>
+            <td>data-start</td>
+            <td>data-easing</td>
+            <td>data-endspeed</td>
+            <td>data-end</td>
+            <td>data-endeasing</td>
+          </tr>
+          <tr>
+            <td><select class="form-control tooltips"  id="datasplitout<SlideID>_<LayersID>" data-original-title="Only available if data-end is set !">
+                <option>none</option>
+                <option>words</option>
+                <option>chars</option>
+                <option>lines</option>
+              </select></td>
+            <td><input type="text" value="0.1"  class="form-control tooltips form-validation" data-validation="floating"  id="dataendelementdelay<SlideID>_<LayersID>" data-original-title="A Value between 0 and 1 like 0.1 to make delays between the Splitted Text Element (end) Animations. Higher the amount of words or chars, you should decrease that number!"></td>
+            <td><input type="text" value="200"  class="form-control tooltips form-validation" data-validation="plusint" id="datastart<SlideID>_<LayersID>" data-original-title="The timepoint in millisecond when/at the Caption should move in to the slide."></td>
+            <td><select  class="form-control tooltips"  id="dataeasing<SlideID>_<LayersID>" data-original-title="The Easing Art how the caption is moved in to the slide (note! Animation art set via Classes !).">
+                <option disabled="disabled">---New Easings---</option>
+                <option>Linear.easeNone </option>
+                <option>Power0.easeIn (linear)</option>
+                <option>Power0.easeInOut (linear)</option>
+                <option>Power0.easeOut (linear)</option>
+                <option>Power1.easeIn</option>
+                <option>Power1.easeInOut</option>
+                <option>Power1.easeOut</option>
+                <option>Power2.easeIn</option>
+                <option>Power2.easeInOut</option>
+                <option>Power2.easeOut</option>
+                <option>Power3.easeIn</option>
+                <option>Power3.easeInOut</option>
+                <option>Power3.easeOut</option>
+                <option>Power4.easeIn</option>
+                <option>Power4.easeInOut</option>
+                <option>Power4.easeOut</option>
+                <option>Quad.easeIn (same as Power1.easeIn)</option>
+                <option>Quad.easeInOut (same as Power1.easeInOut)</option>
+                <option>Quad.easeOut (same as Power1.easeOut)</option>
+                <option>Cubic.easeIn (same as Power2.easeIn)</option>
+                <option>Cubic.easeInOut (same as Power2.easeInOut)</option>
+                <option>Cubic.easeOut (same as Power2.easeOut)</option>
+                <option>Quart.easeIn (same as Power3.easeIn)</option>
+                <option>Quart.easeInOut (same as Power3.easeInOut)</option>
+                <option>Quart.easeOut (same as Power3.easeOut)</option>
+                <option>Quint.easeIn (same as Power4.easeIn)</option>
+                <option>Quint.easeInOut (same as Power4.easeInOut)</option>
+                <option>Quint.easeOut (same as Power4.easeOut)</option>
+                <option>Strong.easeIn (same as Power4.easeIn)</option>
+                <option>Strong.easeInOut (same as Power4.easeInOut)</option>
+                <option>Strong.easeOut (same as Power4.easeOut)</option>
+                <option>Back.easeIn</option>
+                <option>Back.easeInOut</option>
+                <option>Back.easeOut</option>
+                <option>Bounce.easeIn</option>
+                <option>Bounce.easeInOut</option>
+                <option>Bounce.easeOut</option>
+                <option>Circ.easeIn</option>
+                <option>Circ.easeInOut</option>
+                <option>Circ.easeOut</option>
+                <option>Elastic.easeIn</option>
+                <option>Elastic.easeInOut</option>
+                <option>Elastic.easeOut</option>
+                <option>Expo.easeIn</option>
+                <option>Expo.easeInOut</option>
+                <option>Expo.easeOut</option>
+                <option>Sine.easeIn</option>
+                <option>Sine.easeInOut</option>
+                <option>Sine.easeOut</option>
+                <option>SlowMo.ease</option>
+                <option disabled="disabled">---Old Easings---</option>
+                <option>easeOutBack</option>
+                <option>easeInQuad</option>
+                <option>easeOutQuad</option>
+                <option>easeInOutQuad</option>
+                <option>easeInCubic</option>
+                <option>easeOutCubic</option>
+                <option>easeInOutCubic</option>
+                <option>easeInQuart</option>
+                <option>easeOutQuart</option>
+                <option>easeInOutQuart</option>
+                <option>easeInQuint</option>
+                <option>easeOutQuint</option>
+                <option>easeInOutQuint</option>
+                <option>easeInSine</option>
+                <option>easeOutSine</option>
+                <option>easeInOutSine</option>
+                <option>easeInExpo</option>
+                <option selected="selected">easeOutExpo</option>
+                <option>easeInOutExpo</option>
+                <option>easeInCirc</option>
+                <option>easeOutCirc</option>
+                <option>easeInOutCirc</option>
+                <option>easeInElastic</option>
+                <option>easeOutElastic</option>
+                <option>easeInOutElastic</option>
+                <option>easeInBack</option>
+                <option>easeOutBack</option>
+                <option>easeInOutBack</option>
+                <option>easeInBounce</option>
+                <option>easeOutBounce</option>
+                <option>easeInOutBounce</option>
+              </select></td>
+            <td><input type="text" value="500"  class="form-control tooltips form-validation" data-validation="plusint"  id="dataendspeed<SlideID>_<LayersID>" data-original-title="The speed in milliseconds of the transition to move the Caption out from the Slide at the defined  timepoint."></td>
+            <td><input type="text" value=""  class="form-control tooltips form-validation" data-validation="plusint" id="dataend<SlideID>_<LayersID>" data-original-title="The timepoint in millisecond when/at the Caption should move out from the slide."></td>
+            <td><select  class="form-control tooltips"  id="dataendeasing<SlideID>_<LayersID>" data-original-title="The Easing Art how the caption is moved out from the slide (note! Animation art set via Classes !). ">
+                <option disabled="disabled">---New Easings---</option>
+                <option>Linear.easeNone </option>
+                <option>Power0.easeIn (linear)</option>
+                <option>Power0.easeInOut (linear)</option>
+                <option>Power0.easeOut (linear)</option>
+                <option>Power1.easeIn</option>
+                <option>Power1.easeInOut</option>
+                <option>Power1.easeOut</option>
+                <option>Power2.easeIn</option>
+                <option>Power2.easeInOut</option>
+                <option>Power2.easeOut</option>
+                <option>Power3.easeIn</option>
+                <option>Power3.easeInOut</option>
+                <option>Power3.easeOut</option>
+                <option>Power4.easeIn</option>
+                <option>Power4.easeInOut</option>
+                <option>Power4.easeOut</option>
+                <option>Quad.easeIn (same as Power1.easeIn)</option>
+                <option>Quad.easeInOut (same as Power1.easeInOut)</option>
+                <option>Quad.easeOut (same as Power1.easeOut)</option>
+                <option>Cubic.easeIn (same as Power2.easeIn)</option>
+                <option>Cubic.easeInOut (same as Power2.easeInOut)</option>
+                <option>Cubic.easeOut (same as Power2.easeOut)</option>
+                <option>Quart.easeIn (same as Power3.easeIn)</option>
+                <option>Quart.easeInOut (same as Power3.easeInOut)</option>
+                <option>Quart.easeOut (same as Power3.easeOut)</option>
+                <option>Quint.easeIn (same as Power4.easeIn)</option>
+                <option>Quint.easeInOut (same as Power4.easeInOut)</option>
+                <option>Quint.easeOut (same as Power4.easeOut)</option>
+                <option>Strong.easeIn (same as Power4.easeIn)</option>
+                <option>Strong.easeInOut (same as Power4.easeInOut)</option>
+                <option>Strong.easeOut (same as Power4.easeOut)</option>
+                <option>Back.easeIn</option>
+                <option>Back.easeInOut</option>
+                <option>Back.easeOut</option>
+                <option>Bounce.easeIn</option>
+                <option>Bounce.easeInOut</option>
+                <option>Bounce.easeOut</option>
+                <option>Circ.easeIn</option>
+                <option>Circ.easeInOut</option>
+                <option>Circ.easeOut</option>
+                <option>Elastic.easeIn</option>
+                <option>Elastic.easeInOut</option>
+                <option>Elastic.easeOut</option>
+                <option>Expo.easeIn</option>
+                <option>Expo.easeInOut</option>
+                <option>Expo.easeOut</option>
+                <option>Sine.easeIn</option>
+                <option>Sine.easeInOut</option>
+                <option>Sine.easeOut</option>
+                <option>SlowMo.ease</option>
+                <option disabled="disabled">---Old Easings---</option>
+                <option>easeOutBack</option>
+                <option>easeInQuad</option>
+                <option>easeOutQuad</option>
+                <option>easeInOutQuad</option>
+                <option>easeInCubic</option>
+                <option>easeOutCubic</option>
+                <option>easeInOutCubic</option>
+                <option>easeInQuart</option>
+                <option >easeOutQuart</option>
+                <option>easeInOutQuart</option>
+                <option>easeInQuint</option>
+                <option>easeOutQuint</option>
+                <option>easeInOutQuint</option>
+                <option>easeInSine</option>
+                <option>easeOutSine</option>
+                <option>easeInOutSine</option>
+                <option>easeInExpo</option>
+                <option selected="selected">easeOutExpo</option>
+                <option>easeInOutExpo</option>
+                <option>easeInCirc</option>
+                <option>easeOutCirc</option>
+                <option>easeInOutCirc</option>
+                <option>easeInElastic</option>
+                <option>easeOutElastic</option>
+                <option>easeInOutElastic</option>
+                <option>easeInBack</option>
+                <option>easeOutBack</option>
+                <option>easeInOutBack</option>
+                <option>easeInBounce</option>
+                <option>easeOutBounce</option>
+                <option>easeInOutBounce</option>
+              </select></td>
+          </tr>
+        </table>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example3" class="tab-pane">
+        <div class="othersettings">
+          <table class="table styles-option ">
+            <tr>
+              <td width="14%">Styling Captions<a  href="#ajax-modal" class="ShowroomStyling imgdemo" data-toggle="modal" > <i class="clip-notification-2 Showroom"></i> </a>    </td>
+              <td width="14%">Parallax Settings </td>
+              <td width="14%">Tp-scrollbelowslider</td>
+              <td width="14%">Scrolloffset</td>
+              <td width="14%">Tp-resizeme</td>
+              <td width="14%">Without Corner</td>
+              <td width="14%">Loop Animations Within the Layers</td>
+            </tr>
+            <tr>
+              <td><select class="form-control tooltips" id="stylingcaptions<SlideID>_<LayersID>" data-original-title="These are Styling classes created in the settings.css  You can add unlimited amount of Styles in your own css file, to style your captions at the top level already">
+                  <option>none</option>
+                  <option>medium_grey</option>
+                  <option>small_text</option>
+                  <option>medium_text</option>
+                  <option>large_text</option>
+                  <option>very_large_text</option>
+                  <option>very_big_white</option>
+                  <option>very_big_black</option>
+                  <option>modern_medium_fat</option>
+                  <option>modern_medium_fat_white</option>
+                  <option>modern_medium_light</option>
+                  <option>modern_big_bluebg</option>
+                  <option>modern_big_redbg</option>
+                  <option>modern_small_text_dark</option>
+                  <option>boxshadow</option>
+                  <option>black</option>
+                  <option>thinheadline_dark</option>
+                  <option>thintext_dark</option>
+                  <option>largeblackbg</option>
+                  <option>largepinkbg</option>
+                  <option>largewhitebg</option>
+                  <option>largegreenbg</option>
+                  <option>excerpt</option>
+                  <option>large_bold_grey</option>
+                  <option>medium_thin_grey</option>
+                  <option>small_thin_grey</option>
+                  <option>lightgrey_divider</option>
+                  <option>large_bold_darkblue</option>
+                  <option>medium_bg_darkblue</option>
+                  <option>medium_bold_red</option>
+                  <option>medium_light_red</option>
+                  <option>medium_bg_red</option>
+                  <option>medium_bold_orange</option>
+                  <option>medium_bg_orange</option>
+                  <option>grassfloor</option>
+                  <option>large_bold_white</option>
+                  <option>medium_light_white</option>
+                  <option>mediumlarge_light_white</option>
+                  <option>mediumlarge_light_white_center</option>
+                  <option>medium_bg_asbestos</option>
+                  <option>medium_light_black</option>
+                  <option>large_bold_black</option>
+                  <option>mediumlarge_light_darkblue</option>
+                  <option>small_light_white</option>
+                  <option>roundedimage</option>
+                  <option>large_bg_black</option>
+                  <option>mediumwhitebg</option>
+                  <option>large_bold_white_25</option>
+                  <option>medium_text_shadow</option>
+                  <option>black_heavy_60</option>
+                  <option>white_heavy_40</option>
+                  <option>grey_heavy_72</option>
+                  <option>grey_regular_18</option>
+                  <option>black_thin_34</option>
+                  <option>arrowicon</option>
+                  <option>light_heavy_60</option>
+                  <option>black_bold_40</option>
+                  <option>light_heavy_70</option>
+                  <option>black_heavy_70</option>
+                  <option>black_bold_bg_20</option>
+                  <option>greenbox30</option>
+                  <option>blue_heavy_60</option>
+                  <option>green_bold_bg_20</option>
+                  <option>whitecircle_600px</option>
+                  <option>fullrounded</option>
+                  <option>light_heavy_40</option>
+                  <option>white_thin_34</option>
+                  <option>fullbg_gradient</option>
+                  <option>light_medium_30</option>
+                  <option>red_bold_bg_20</option>
+                  <option>blue_bold_bg_20</option>
+                  <option>white_bold_bg_20</option>
+                  <option>white_heavy_70</option>
+                  <option>light_heavy_70_shadowed</option>
+                  <option>light_medium_30_shadowed</option>
+                  <option>blackboxed_heavy</option>
+                  <option>bignumbers_white</option>
+                  <option>whiteline_long</option>
+                  <option>light_medium_20_shadowed</option>
+                  <option>fullgradient_overlay</option>
+                  <option>light_medium_20</option>
+                  <option>reddishbg_heavy_70</option>
+                  <option>borderbox_725x130</option>
+                  <option>light_heavy_34</option>
+                  <option>black_thin_30</option>
+                  <option>black_thin_whitebg_30</option>
+                  <option>white_heavy_60</option>
+                  <option>black_thin_blackbg_30</option>
+                  <option>light_thin_60</option>
+                  <option>greenbgfull</option>
+                  <option>bluebgfull</option>
+                  <option>blackbgfull</option>
+                  <option>wave_repeat1</option>
+                  <option>wavebg1</option>
+                  <option>wavebg2</option>
+                  <option>wavebg3</option>
+                  <option>wavebg4</option>
+                  <option>wavebg5</option>
+                  <option>greenishbg_heavy_70</option>
+                  <option>deepblue_sea</option>
+                </select></td>
+              <td><select class="form-control tooltips" id="parallaxsettings<SlideID>_<LayersID>" data-original-title="You can define a Parallax Level for each Layer, which will allow the Layer to move based on scroll or mouse movements (if option activated).">
+                  <option>none</option>
+                  <option>rs-parallaxlevel-0</option>
+                  <option>rs-parallaxlevel-1</option>
+                  <option>rs-parallaxlevel-2</option>
+                  <option>rs-parallaxlevel-3</option>
+                  <option>rs-parallaxlevel-4</option>
+                  <option>rs-parallaxlevel-5</option>
+                  <option>rs-parallaxlevel-6</option>
+                  <option>rs-parallaxlevel-7</option>
+                  <option>rs-parallaxlevel-8</option>
+                  <option>rs-parallaxlevel-9</option>
+                  <option>rs-parallaxlevel-10</option>
+                </select></td>
+              <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="If this class added to an element within the caption container, it will scroll the Body Position to under the current slider (used in Fullscreen slider only)">
+                  <input type="checkbox"  id="scrollbelowslider<SlideID>_<LayersID>">
+                </div></td>
+              <td><input type="text" value="0"  class="form-control tooltips form-validation" data-validation="int" id="scrolloffset<SlideID>_<LayersID>" data-original-title="Value from -200 till 200. The Offset Value of the Scroll Position"></td>
+              <td><div class="make-switch tooltips" data-on="primary" data-off="info" data-original-title="Add class tp-resizeme to the container inside the caption and every item within (included the same container) will be responsive resized.">
+                  <input type="checkbox"  id="resizeme<SlideID>_<LayersID>">
+                </div></td>
+              <td><select class="form-control tooltips" id="withoutcorner<SlideID>_<LayersID>" data-original-title="This classes added without any content in a closed div i.e. &lt;div class=&quot;frontcorner&quot;&gt;&lt;/div&gt; within the container.  It will cut the left/right side of the caption background in 45° 1:1 ">
+                  <option>none</option>
+                  <option>frontcorner</option>
+                  <option>backcorner</option>
+                  <option>backcornertop</option>
+                  <option>backcornertop</option>
+                </select></td>
+              <td><select class="form-control tooltips" id="loopanimations<SlideID>_<LayersID>" data-original-title="To Define Loop animations, where you can set the different Loop Animation Details">
+                  <option>none</option>
+                  <option>rs-wave</option>
+                  <option>rs-pulse</option>
+                  <option>rs-pendulum</option>
+                  <option>rs-slideloop</option>
+                  <option>rs-rotate</option>
+                </select></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example4" class="tab-pane">
+        <table class="table transition-option " >
+          <tr>
+            <th rowspan="5">Transition In</th>
+            <td>Classes :</td>
+            <td colspan="6" align="left"><select name="Classes<SlideID>_<LayersID>" class="form-control tooltips" id="Classes<SlideID>_<LayersID>" style="width:250px;" data-original-title="Incoming animation Classes">
+              <option value="sft" selected="selected">Short from Top</option>
+              <option value="sfb">Short from Bottom</option>
+              <option value="sfr">Short from Right</option>
+              <option value="sfl">Short from Left</option>
+              <option value="lft">Long from Top</option>
+              <option value="lfb">Long from Bottom</option>
+              <option value="lfr">Long from Right</option>
+              <option value="lfl">Long from Left</option>
+              <option value="skewfromleft">Skew from Left</option>
+              <option value="skewfromright">Skew from Right </option>
+              <option value="skewfromleftshort">Skew Short from Left </option>
+              <option value="skewfromrightshort">Skew Short from Right </option>
+              <option value="fade">fading </option>
+              <option value="randomrotate"> Fade in, Rotate from a Random position and Degree</option>
+              <option value="customin">Custom in</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td width="12%">Transition X</td>
+            <td width="12%">Transition Y</td>
+            <td width="12%">Transition Z</td>
+            <td width="12%">Rotation X</td>
+            <td width="12%">Rotation Y</td>
+            <td width="12%">Rotation Z</td>
+            <td width="12%">Scale X</td>
+          </tr>
+          <tr>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="TransitionX<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="TransitionY<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="TransitionZ<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="RotationX<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="RotationY<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="RotationZ<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="ScaleX<SlideID>_<LayersID>">
+              %</td>
+          </tr>
+          <tr>
+            <td>Scale Y</td>
+            <td>Skew X</td>
+            <td>Skew Y</td>
+            <td>Opacity</td>
+            <td>Perspective</td>
+            <td>Origin X</td>
+            <td>Origin Y</td>
+          </tr>
+          <tr>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="ScaleY<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="SkewX<SlideID>_<LayersID>" />
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="SkewY<SlideID>_<LayersID>" />
+              °</td>
+            <td><input type="text" value="100"  class="form-control form-validation" data-validation="int" id="Opacity<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="600"  class="form-control form-validation" data-validation="int" id="Perspective<SlideID>_<LayersID>" />
+              px</td>
+            <td><input type="text" value="50"  class="form-control form-validation" data-validation="int" id="OriginX<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="50"  class="form-control form-validation" data-validation="int" id="OriginY<SlideID>_<LayersID>" />
+            %</td>
+          </tr>
+          <tr>
+            <th rowspan="5">Transition Out</th>
+            <td>Classes :</td>
+            <td colspan="6" align="left"><select name="OutClasses<SlideID>_<LayersID>" class="form-control tooltips" id="OutClasses<SlideID>_<LayersID>" style="width:250px;" data-original-title="Outgoing animation Classes">
+              <option value="stt" selected="selected">Short to Top </option>
+              <option value="stb">Short to Bottom </option>
+              <option value="str">Short to Right </option>
+              <option value="stl">Short to Left </option>
+              <option value="ltt">Long to Top </option>
+              <option value="ltb">Long to Bottom </option>
+              <option value="ltr">Long to Right </option>
+              <option value="ltl">Long to Left </option>
+              <option value="skewtoleft">Skew to Left </option>
+              <option value="skewtoright">Skew to Right </option>
+              <option value="skewtoleftshort">Skew Short to Left </option>
+              <option value="skewtorightshort">Skew Short to Right </option>
+              <option value="fadeout">fading </option>
+              <option value="randomrotateout">Fade in, Rotate from a Random position and Degree</option>
+              <option value="customout">Custom out</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Transition X</td>
+            <td>Transition Y</td>
+            <td>Transition Z</td>
+            <td>Rotation X</td>
+            <td>Rotation Y</td>
+            <td>Rotation Z</td>
+            <td>Scale X</td>
+          </tr>
+          <tr>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutTransitionX<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutTransitionY<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutTransitionZ<SlideID>_<LayersID>">
+              px</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutRotationX<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutRotationY<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutRotationZ<SlideID>_<LayersID>">
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutScaleX<SlideID>_<LayersID>">
+              %</td>
+          </tr>
+          <tr>
+            <td>Scale Y</td>
+            <td>Skew X</td>
+            <td>Skew Y</td>
+            <td>Opacity</td>
+            <td>Perspective</td>
+            <td>Origin X</td>
+            <td>Origin Y</td>
+          </tr>
+          <tr>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutScaleY<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutSkewX<SlideID>_<LayersID>" />
+              °</td>
+            <td><input type="text" value="0"  class="form-control form-validation" data-validation="int" id="OutSkewY<SlideID>_<LayersID>" />
+              °</td>
+            <td><input type="text" value="100"  class="form-control form-validation" data-validation="int" id="OutOpacity<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="600"  class="form-control form-validation" data-validation="int" id="OutPerspective<SlideID>_<LayersID>" />
+              px</td>
+            <td><input type="text" value="50"  class="form-control form-validation" data-validation="int" id="OutOriginX<SlideID>_<LayersID>" />
+              %</td>
+            <td><input type="text" value="50"  class="form-control form-validation" data-validation="int" id="OutOriginY<SlideID>_<LayersID>" />
+              %</td>
+          </tr>
+        </table>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example5" class="tab-pane ">
+        <div class="link-setting">
+          <table class="table table-hover video-option ">
+            <tr>
+              <th>Url</th>
+              <td><input type="text" value="http://"  class="form-control tooltips form-validation" data-validation="string" id="Url<SlideID>_<LayersID>"  data-original-title="A link on the whole slide pic"></td>
+            </tr>
+            <tr>
+              <th>Target</th>
+              <td><select class="form-control" style="width:100px tooltips" id="Target<SlideID>_<LayersID>"  data-original-title="The target of the Link for the whole slide pic.">
+                  <option value="_blank">Blank</option>
+                  <option value="_parent">Parent</option>
+                  <option value="_self">Self</option>
+                  <option value="_top">Top</option>
+                  <option value="_new">new</option>
+                </select></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example6" class="tab-pane">
+        <table class="table styles-option " >
+          <tr>
+            <td>Width</td>
+            <td>Height</td>
+            <td>Top</td>
+            <td>Left</td>
+            <td>Padding Top</td>
+            <td>Padding Right</td>
+            <td>Padding Bottom</td>
+            <td>Padding Left</td>
+            <td>Border Top</td>
+            <td>Border Right</td>
+          </tr>
+          <tr>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint"  id="Width<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint" id="Height<SlideID>_<LayersID>"></td>
+            <td><input type="text" value="0px"  class="form-control form-validation" data-validation="highint" id="Top<SlideID>_<LayersID>"></td>
+            <td><input type="text" value="0px"  class="form-control form-validation" data-validation="highint" id="Left<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint"  id="PaddingTop<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint"  id="PaddingRight<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint"  id="PaddingBottom<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint" id="PaddingLeft<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="BorderTop<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="string"  id="BorderRight<SlideID>_<LayersID>"></td>
+          </tr>
+          <tr>
+            <td>Border Bottom</td>
+            <td>Border Left</td>
+            <td>Font Family</td>
+            <td>Font Size</td>
+            <td>Line-height</td>
+            <td>Color</td>
+            <td>Background Color</td>
+            <td>Rounded Corners</td>
+            <td>Word-wrap</td>
+            <td>Custom CSS</td>
+          </tr>
+          <tr>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="BorderBottom<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="BorderLeft<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="FontFamily<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint" id="FontSize<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint" id="Line-height<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control color-picker form-validation" data-validation="string" data-colorpicker-guid="1" id="Color<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control color-picker form-validation" data-validation="string" data-colorpicker-guid="1" id="BackgroundColor<SlideID>_<LayersID>"></td>
+            <td><input type="text" value=""  class="form-control form-validation" data-validation="unitint" id="Roundedcorners<SlideID>_<LayersID>"></td>
+            <td><select class="form-control" id="Word-wrap<SlideID>_<LayersID>">
+                <option selected value="normal">normal</option>
+                <option value="break-word">break-word</option>
+              </select></td>
+            <td><input type="text" value=""  class="form-control tooltips form-validation" data-validation="string" id="CustomCSS<SlideID>_<LayersID>"  data-original-title="Custom CSS"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="layer_tab<SlideID>_<LayersID>_example7" class="tab-pane">
+        <div class="slide-content attributes-content">
+          <table class="table attributes-option ">
+            <tr>
+              <th>Id:</th>
+              <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="Id<SlideID>_<LayersID>"></td>
+              <th>Class:</th>
+              <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="Class<SlideID>_<LayersID>"></td>
+              <th>Title:</th>
+              <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="Title<SlideID>_<LayersID>"></td>
+              <th>Alt:</th>
+              <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="Alt<SlideID>_<LayersID>"></td>
+              <th>Rel:</th>
+              <td><input type="text" value=""  class="form-control form-validation" data-validation="string" id="Rel<SlideID>_<LayersID>"></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
